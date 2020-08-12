@@ -1,0 +1,642 @@
+<div class="dragscroll_outterbox">
+	<div class="dragscroll_innerbox dragscroll">
+		<div class="dragscroll_wrap">
+
+			<div class="contentblockpanel tabmodule_B" id="featured-industries-tabs" style="">
+				<div class="dragscroll_outterbox navbarbox">
+					<div class="dragscroll_innerbox dragscroll">
+						<div class="dragscroll_wrap">
+							<ul class="nav nav-tabs">
+								<!-- ngRepeat: featuredIndustry in featuredIndustries -->
+								<li ng-repeat="featuredIndustry in featuredIndustries" ng-class="{active: $index == 0}"
+									class="ng-scope active">
+									<a data-toggle="tab" href="#industry0" class="ng-binding"
+										aria-expanded="true">Aerospace</a>
+								</li><!-- end ngRepeat: featuredIndustry in featuredIndustries -->
+								<li ng-repeat="featuredIndustry in featuredIndustries" ng-class="{active: $index == 0}"
+									class="ng-scope">
+									<a data-toggle="tab" href="#industry1" class="ng-binding" aria-expanded="false">Air
+										Transport</a>
+								</li><!-- end ngRepeat: featuredIndustry in featuredIndustries -->
+								<li ng-repeat="featuredIndustry in featuredIndustries" ng-class="{active: $index == 0}"
+									class="ng-scope">
+									<a data-toggle="tab" href="#industry2" class="ng-binding"
+										aria-expanded="false">Construction</a>
+								</li><!-- end ngRepeat: featuredIndustry in featuredIndustries -->
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="dragscroll_outterbox">
+					<div class="dragscroll_innerbox dragscroll">
+						<div class="dragscroll_wrap tab-content">
+							<!-- ngRepeat: featuredIndustry in featuredIndustries -->
+							<div ng-repeat="featuredIndustry in featuredIndustries" id="industry0"
+								class="tab-pane tabContent fade featuredIndustryBlock ng-scope active in"
+								ng-class="{active: $index == 0}">
+								<div class="panel description small featuredIndustry heading0">
+									<h6 ng-bind="featuredIndustry.category" class="ng-binding">Aerospace</h6>
+									<p class="featured-description ng-binding">A sector poised for take-off</p>
+								</div>
+								<!-- <div class="panel-body"> -->
+								<!--------------------------------------------------------------------->
+								<!------------------------------ COURSES ------------------------------>
+								<!--------------------------------------------------------------------->
+								<div class="card">
+									<div class="icon"><img
+											src="/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_1.png">
+									</div>
+									<h3>Courses</h3>
+									<a href="/content/portal/en/training-exchange/course-landing.html?industry=Aerospace&amp;title=Aerospace"
+										ng-click="fnAnalytics('Courses', featuredIndustry.category)" class="textlink">
+										View More
+									</a>
+								</div>
+								<!--------------------------------------------------------------------->
+								<!------------------------------ ARTICLES ----------------------------->
+								<!--------------------------------------------------------------------->
+								<div class="card">
+									<div class="icon"><img
+											src="/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_2.png">
+									</div>
+									<h3>Articles</h3>
+									<a href="/content/portal/en/career-resources/career-resources.html?q=Aerospace_KeyArticles"
+										ng-click="fnAnalytics('Articles', featuredIndustry.category)" class="textlink">
+										View More
+									</a>
+								</div>
+								<!--------------------------------------------------------------------->
+								<!------------------------------ EBOOKS ------------------------------->
+								<!--------------------------------------------------------------------->
+								<div class="card">
+									<div class="icon"><img
+											src="/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_3.png">
+									</div>
+									<h3>e-Books</h3>
+									<a href="/content/portal/en/career-resources/career-resources/feature-ebooks/search-nlbEbooks.html?q=Aerospace"
+										ng-click="fnAnalytics('e-Books', featuredIndustry.category)" class="textlink">
+										View More
+									</a>
+								</div>
+								<!--------------------------------------------------------------------->
+								<!------------------------------ MEDIAS ------------------------------->
+								<!--------------------------------------------------------------------->
+								<div class="card">
+									<div class="icon"><img
+											src="/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_4.png">
+									</div>
+									<h3>Media</h3>
+									<a href="/content/portal/en/career-resources/career-resources.html?q=Aerospace_KeyMedia&amp;type=audio-and-videos"
+										ng-click="fnAnalytics('Media', featuredIndustry.category)" class="textlink">
+										View More
+									</a>
+								</div>
+							</div><!-- end ngRepeat: featuredIndustry in featuredIndustries -->
+							<div ng-repeat="featuredIndustry in featuredIndustries" id="industry1"
+								class="tab-pane tabContent fade featuredIndustryBlock ng-scope"
+								ng-class="{active: $index == 0}">
+								<div class="panel description small featuredIndustry heading1">
+									<h6 ng-bind="featuredIndustry.category" class="ng-binding">Air Transport</h6>
+									<p class="featured-description ng-binding">Charting growth &amp; opportunities</p>
+								</div>
+								<!-- <div class="panel-body"> -->
+								<!--------------------------------------------------------------------->
+								<!------------------------------ COURSES ------------------------------>
+								<!--------------------------------------------------------------------->
+								<div class="card">
+									<div class="icon"><img
+											src="/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_1.png">
+									</div>
+									<h3>Courses</h3>
+									<a href="/content/portal/en/training-exchange/course-landing.html?industry=Air%20Transport&amp;title=Air%20Transport"
+										ng-click="fnAnalytics('Courses', featuredIndustry.category)" class="textlink">
+										View More
+									</a>
+								</div>
+								<!--------------------------------------------------------------------->
+								<!------------------------------ ARTICLES ----------------------------->
+								<!--------------------------------------------------------------------->
+								<div class="card">
+									<div class="icon"><img
+											src="/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_2.png">
+									</div>
+									<h3>Articles</h3>
+									<a href="/content/portal/en/career-resources/career-resources.html?q=AirTpt_KeyArticles"
+										ng-click="fnAnalytics('Articles', featuredIndustry.category)" class="textlink">
+										View More
+									</a>
+								</div>
+								<!--------------------------------------------------------------------->
+								<!------------------------------ EBOOKS ------------------------------->
+								<!--------------------------------------------------------------------->
+								<div class="card">
+									<div class="icon"><img
+											src="/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_3.png">
+									</div>
+									<h3>e-Books</h3>
+									<a href="/content/portal/en/career-resources/career-resources/feature-ebooks/search-nlbEbooks.html?q=Air%20Transport"
+										ng-click="fnAnalytics('e-Books', featuredIndustry.category)" class="textlink">
+										View More
+									</a>
+								</div>
+								<!--------------------------------------------------------------------->
+								<!------------------------------ MEDIAS ------------------------------->
+								<!--------------------------------------------------------------------->
+								<div class="card">
+									<div class="icon"><img
+											src="/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_4.png">
+									</div>
+									<h3>Media</h3>
+									<a href="/content/portal/en/career-resources/career-resources.html?q=AirTpt_KeyMedia&amp;type=audio-and-videos"
+										ng-click="fnAnalytics('Media', featuredIndustry.category)" class="textlink">
+										View More
+									</a>
+								</div>
+							</div><!-- end ngRepeat: featuredIndustry in featuredIndustries -->
+							<div ng-repeat="featuredIndustry in featuredIndustries" id="industry2"
+								class="tab-pane tabContent fade featuredIndustryBlock ng-scope"
+								ng-class="{active: $index == 0}">
+								<div class="panel description small featuredIndustry heading2">
+									<h6 ng-bind="featuredIndustry.category" class="ng-binding">Construction</h6>
+									<p class="featured-description ng-binding"> Transforming with new technologies &amp;
+										developments</p>
+								</div>
+								<!-- <div class="panel-body"> -->
+								<!--------------------------------------------------------------------->
+								<!------------------------------ COURSES ------------------------------>
+								<!--------------------------------------------------------------------->
+								<div class="card">
+									<div class="icon"><img
+											src="/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_1.png">
+									</div>
+									<h3>Courses</h3>
+									<a href="/content/portal/en/training-exchange/course-landing.html?industry=Construction&amp;title=Construction"
+										ng-click="fnAnalytics('Courses', featuredIndustry.category)" class="textlink">
+										View More
+									</a>
+								</div>
+								<!--------------------------------------------------------------------->
+								<!------------------------------ ARTICLES ----------------------------->
+								<!--------------------------------------------------------------------->
+								<div class="card">
+									<div class="icon"><img
+											src="/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_2.png">
+									</div>
+									<h3>Articles</h3>
+									<a href="/content/portal/en/career-resources/career-resources.html?q=Construction_KeyArticles"
+										ng-click="fnAnalytics('Articles', featuredIndustry.category)" class="textlink">
+										View More
+									</a>
+								</div>
+								<!--------------------------------------------------------------------->
+								<!------------------------------ EBOOKS ------------------------------->
+								<!--------------------------------------------------------------------->
+								<div class="card">
+									<div class="icon"><img
+											src="/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_3.png">
+									</div>
+									<h3>e-Books</h3>
+									<a href="/content/portal/en/career-resources/career-resources/feature-ebooks/search-nlbEbooks.html?q=Construction"
+										ng-click="fnAnalytics('e-Books', featuredIndustry.category)" class="textlink">
+										View More
+									</a>
+								</div>
+								<!--------------------------------------------------------------------->
+								<!------------------------------ MEDIAS ------------------------------->
+								<!--------------------------------------------------------------------->
+								<div class="card">
+									<div class="icon"><img
+											src="/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_4.png">
+									</div>
+									<h3>Media</h3>
+									<a href="/content/portal/en/career-resources/career-resources.html?q=Construction_KeyMedia&amp;type=audio-and-videos"
+										ng-click="fnAnalytics('Media', featuredIndustry.category)" class="textlink">
+										View More
+									</a>
+								</div>
+							</div><!-- end ngRepeat: featuredIndustry in featuredIndustries -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contentblockpanel" id="featured-industries-panel" style="display: none;">
+				<!-- ngRepeat: featuredIndustry in featuredIndustries -->
+				<div ng-repeat="featuredIndustry in featuredIndustries" id="industry0"
+					class="panel featuredskillsblock box1 ng-scope active" ng-class="{active: $index == 0}">
+					<div class="panel description small featuredIndustry heading0">
+						<h6 ng-bind="featuredIndustry.category" class="ng-binding">Aerospace</h6>
+						<p class="featured-description ng-binding">A sector poised for take-off</p>
+					</div>
+					<!-- <div class="panel-body"> -->
+					<!--------------------------------------------------------------------->
+					<!------------------------------ COURSES ------------------------------>
+					<!--------------------------------------------------------------------->
+					<div class="card">
+						<div class="icon"><img
+								src="/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_1.png"></div>
+						<h3>Courses</h3>
+						<a href="/content/portal/en/training-exchange/course-landing.html?industry=Aerospace&amp;title=Aerospace"
+							ng-click="fnAnalytics('Courses', featuredIndustry.category)" class="textlink">
+							View More
+						</a>
+					</div>
+					<!--------------------------------------------------------------------->
+					<!------------------------------ ARTICLES ----------------------------->
+					<!--------------------------------------------------------------------->
+					<div class="card">
+						<div class="icon"><img
+								src="/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_2.png"></div>
+						<h3>Articles</h3>
+						<a href="/content/portal/en/career-resources/career-resources.html?q=Aerospace_KeyArticles"
+							ng-click="fnAnalytics('Articles', featuredIndustry.category)" class="textlink">
+							View More
+						</a>
+					</div>
+					<!--------------------------------------------------------------------->
+					<!------------------------------ EBOOKS ------------------------------->
+					<!--------------------------------------------------------------------->
+					<div class="card">
+						<div class="icon"><img
+								src="/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_3.png"></div>
+						<h3>e-Books</h3>
+						<a href="/content/portal/en/career-resources/career-resources/feature-ebooks/search-nlbEbooks.html?q=Aerospace"
+							ng-click="fnAnalytics('e-Books', featuredIndustry.category)" class="textlink">
+							View More
+						</a>
+					</div>
+					<!--------------------------------------------------------------------->
+					<!------------------------------ MEDIAS ------------------------------->
+					<!--------------------------------------------------------------------->
+					<div class="card">
+						<div class="icon"><img
+								src="/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_4.png"></div>
+						<h3>Media</h3>
+						<a href="/content/portal/en/career-resources/career-resources.html?q=Aerospace_KeyMedia&amp;type=audio-and-videos"
+							ng-click="fnAnalytics('Media', featuredIndustry.category)" class="textlink">
+							View More
+						</a>
+					</div>
+				</div><!-- end ngRepeat: featuredIndustry in featuredIndustries -->
+				<div ng-repeat="featuredIndustry in featuredIndustries" id="industry1"
+					class="panel featuredskillsblock box1 ng-scope" ng-class="{active: $index == 0}">
+					<div class="panel description small featuredIndustry heading1">
+						<h6 ng-bind="featuredIndustry.category" class="ng-binding">Air Transport</h6>
+						<p class="featured-description ng-binding">Charting growth &amp; opportunities</p>
+					</div>
+					<!-- <div class="panel-body"> -->
+					<!--------------------------------------------------------------------->
+					<!------------------------------ COURSES ------------------------------>
+					<!--------------------------------------------------------------------->
+					<div class="card">
+						<div class="icon"><img
+								src="/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_1.png"></div>
+						<h3>Courses</h3>
+						<a href="/content/portal/en/training-exchange/course-landing.html?industry=Air%20Transport&amp;title=Air%20Transport"
+							ng-click="fnAnalytics('Courses', featuredIndustry.category)" class="textlink">
+							View More
+						</a>
+					</div>
+					<!--------------------------------------------------------------------->
+					<!------------------------------ ARTICLES ----------------------------->
+					<!--------------------------------------------------------------------->
+					<div class="card">
+						<div class="icon"><img
+								src="/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_2.png"></div>
+						<h3>Articles</h3>
+						<a href="/content/portal/en/career-resources/career-resources.html?q=AirTpt_KeyArticles"
+							ng-click="fnAnalytics('Articles', featuredIndustry.category)" class="textlink">
+							View More
+						</a>
+					</div>
+					<!--------------------------------------------------------------------->
+					<!------------------------------ EBOOKS ------------------------------->
+					<!--------------------------------------------------------------------->
+					<div class="card">
+						<div class="icon"><img
+								src="/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_3.png"></div>
+						<h3>e-Books</h3>
+						<a href="/content/portal/en/career-resources/career-resources/feature-ebooks/search-nlbEbooks.html?q=Air%20Transport"
+							ng-click="fnAnalytics('e-Books', featuredIndustry.category)" class="textlink">
+							View More
+						</a>
+					</div>
+					<!--------------------------------------------------------------------->
+					<!------------------------------ MEDIAS ------------------------------->
+					<!--------------------------------------------------------------------->
+					<div class="card">
+						<div class="icon"><img
+								src="/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_4.png"></div>
+						<h3>Media</h3>
+						<a href="/content/portal/en/career-resources/career-resources.html?q=AirTpt_KeyMedia&amp;type=audio-and-videos"
+							ng-click="fnAnalytics('Media', featuredIndustry.category)" class="textlink">
+							View More
+						</a>
+					</div>
+				</div><!-- end ngRepeat: featuredIndustry in featuredIndustries -->
+				<div ng-repeat="featuredIndustry in featuredIndustries" id="industry2"
+					class="panel featuredskillsblock box1 ng-scope" ng-class="{active: $index == 0}">
+					<div class="panel description small featuredIndustry heading2">
+						<h6 ng-bind="featuredIndustry.category" class="ng-binding">Construction</h6>
+						<p class="featured-description ng-binding"> Transforming with new technologies &amp;
+							developments</p>
+					</div>
+					<!-- <div class="panel-body"> -->
+					<!--------------------------------------------------------------------->
+					<!------------------------------ COURSES ------------------------------>
+					<!--------------------------------------------------------------------->
+					<div class="card">
+						<div class="icon"><img
+								src="/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_1.png"></div>
+						<h3>Courses</h3>
+						<a href="/content/portal/en/training-exchange/course-landing.html?industry=Construction&amp;title=Construction"
+							ng-click="fnAnalytics('Courses', featuredIndustry.category)" class="textlink">
+							View More
+						</a>
+					</div>
+					<!--------------------------------------------------------------------->
+					<!------------------------------ ARTICLES ----------------------------->
+					<!--------------------------------------------------------------------->
+					<div class="card">
+						<div class="icon"><img
+								src="/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_2.png"></div>
+						<h3>Articles</h3>
+						<a href="/content/portal/en/career-resources/career-resources.html?q=Construction_KeyArticles"
+							ng-click="fnAnalytics('Articles', featuredIndustry.category)" class="textlink">
+							View More
+						</a>
+					</div>
+					<!--------------------------------------------------------------------->
+					<!------------------------------ EBOOKS ------------------------------->
+					<!--------------------------------------------------------------------->
+					<div class="card">
+						<div class="icon"><img
+								src="/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_3.png"></div>
+						<h3>e-Books</h3>
+						<a href="/content/portal/en/career-resources/career-resources/feature-ebooks/search-nlbEbooks.html?q=Construction"
+							ng-click="fnAnalytics('e-Books', featuredIndustry.category)" class="textlink">
+							View More
+						</a>
+					</div>
+					<!--------------------------------------------------------------------->
+					<!------------------------------ MEDIAS ------------------------------->
+					<!--------------------------------------------------------------------->
+					<div class="card">
+						<div class="icon"><img
+								src="/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_4.png"></div>
+						<h3>Media</h3>
+						<a href="/content/portal/en/career-resources/career-resources.html?q=Construction_KeyMedia&amp;type=audio-and-videos"
+							ng-click="fnAnalytics('Media', featuredIndustry.category)" class="textlink">
+							View More
+						</a>
+					</div>
+				</div><!-- end ngRepeat: featuredIndustry in featuredIndustries -->
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+////////////////////////////////
+<div class="dragscroll_outterbox">
+                                            <div class="dragscroll_innerbox dragscroll">
+                                                <div class="dragscroll_wrap">
+                                                    <div class="contentblockpanel"
+                                                        id="featured-industries-place-holder">
+                                                        <div class="panel featuredskillsblock">
+                                                            <div
+                                                                class="panel description small featuredIndustry heading0">
+                                                                <h6 class="place-holder-text light-blue big"></h6>
+                                                                <p
+                                                                    class="place-holder-text light-blue small featured-description">
+                                                                </p>
+                                                                <p
+                                                                    class="place-holder-text light-blue small featured-description">
+                                                                </p>
+                                                                <p
+                                                                    class="place-holder-text light-blue small featured-description">
+                                                                </p>
+                                                                <p
+                                                                    class="place-holder-text light-blue small featured-description">
+                                                                </p>
+                                                                <p
+                                                                    class="place-holder-text light-blue small featured-description">
+                                                                </p>
+                                                                <p
+                                                                    class="place-holder-text light-blue small featured-description">
+                                                                </p>
+                                                            </div>
+                                                            <div class="card">
+                                                                <div class="icon"><img
+                                                                        src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_1.png">
+                                                                </div>
+                                                                <p class="place-holder-text big three-quarter"></p>
+                                                                <p class="place-holder-text medium half"></p>
+                                                                <div class="divider"></div>
+                                                                <p class="place-holder-text small full-width"></p>
+                                                                <p class="place-holder-text small three-quarter"></p>
+                                                                <p class="place-holder-text small half"></p>
+                                                            </div>
+                                                            <div class="card">
+                                                                <div class="icon"><img
+                                                                        src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_2.png">
+                                                                </div>
+                                                                <p class="place-holder-text big three-quarter"></p>
+                                                                <p class="place-holder-text medium half"></p>
+                                                                <div class="divider"></div>
+                                                                <p class="place-holder-text small full-width"></p>
+                                                                <p class="place-holder-text small three-quarter"></p>
+                                                                <p class="place-holder-text small half"></p>
+                                                            </div>
+                                                            <div class="card">
+                                                                <div class="icon"><img
+                                                                        src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_3.png">
+                                                                </div>
+                                                                <p class="place-holder-text big three-quarter"></p>
+                                                                <p class="place-holder-text medium half"></p>
+                                                                <div class="divider"></div>
+                                                                <p class="place-holder-text small full-width"></p>
+                                                                <p class="place-holder-text small three-quarter"></p>
+                                                                <p class="place-holder-text small half"></p>
+                                                            </div>
+                                                            <div class="card">
+                                                                <div class="icon"><img
+                                                                        src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_4.png">
+                                                                </div>
+                                                                <p class="place-holder-text big three-quarter"></p>
+                                                                <p class="place-holder-text medium half"></p>
+                                                                <div class="divider"></div>
+                                                                <p class="place-holder-text small full-width"></p>
+                                                                <p class="place-holder-text small three-quarter"></p>
+                                                                <p class="place-holder-text small half"></p>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="contentblockpanel tabmodule_B"
+                                                        id="featured-industries-tabs" style="display: none;">
+                                                        <div class="dragscroll_outterbox navbarbox">
+                                                            <div class="dragscroll_innerbox dragscroll">
+                                                                <div class="dragscroll_wrap">
+                                                                    <ul class="nav nav-tabs">
+                                                                        <li ng-repeat="featuredIndustry in featuredIndustries"
+                                                                            ng-class="{active: $index == 0}">
+                                                                            <a data-toggle="tab"
+                                                                                href="#{{ featuredIndustry.referenceId }}">{{ featuredIndustry.category }}</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="dragscroll_outterbox">
+                                                            <div class="dragscroll_innerbox dragscroll">
+                                                                <div class="dragscroll_wrap tab-content">
+                                                                    <div ng-repeat="featuredIndustry in featuredIndustries"
+                                                                        id="{{ featuredIndustry.referenceId }}"
+                                                                        class="tab-pane tabContent fade in featuredIndustryBlock"
+                                                                        ng-class="{active: $index == 0}">
+                                                                        <div
+                                                                            class="panel description small featuredIndustry {{ featuredIndustry.cssClass }}">
+                                                                            <h6 ng-bind="featuredIndustry.category">
+                                                                            </h6>
+                                                                            <p class="featured-description">
+                                                                                {{ featuredIndustry.description | ellipsestring : 170 }}
+                                                                            </p>
+                                                                        </div>
+                                                                        <!-- <div class="panel-body"> -->
+                                                                        <!--------------------------------------------------------------------->
+                                                                        <!------------------------------ COURSES ------------------------------>
+                                                                        <!--------------------------------------------------------------------->
+                                                                        <div class="card">
+                                                                            <div class="icon"><img
+                                                                                    src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_1.png">
+                                                                            </div>
+                                                                            <h3>Courses</h3>
+                                                                            <a href="training-exchange/course-landing0cbf.html?industry={{%20encodeUri(featuredIndustry.courseKeyword)%20}}&amp;title={{encodeUri(featuredIndustry.category)}}"
+                                                                                ng-click="fnAnalytics('Courses', featuredIndustry.category)"
+                                                                                class="textlink">
+                                                                                View More
+                                                                            </a>
+                                                                        </div>
+                                                                        <!--------------------------------------------------------------------->
+                                                                        <!------------------------------ ARTICLES ----------------------------->
+                                                                        <!--------------------------------------------------------------------->
+                                                                        <div class="card">
+                                                                            <div class="icon"><img
+                                                                                    src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_2.png">
+                                                                            </div>
+                                                                            <h3>Articles</h3>
+                                                                            <a href="career-resources/career-resources5606.html?q={{%20encodeUri(featuredIndustry.articleKeyword)%20}}"
+                                                                                ng-click="fnAnalytics('Articles', featuredIndustry.category)"
+                                                                                class="textlink">
+                                                                                View More
+                                                                            </a>
+                                                                        </div>
+                                                                        <!--------------------------------------------------------------------->
+                                                                        <!------------------------------ EBOOKS ------------------------------->
+                                                                        <!--------------------------------------------------------------------->
+                                                                        <div class="card">
+                                                                            <div class="icon"><img
+                                                                                    src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_3.png">
+                                                                            </div>
+                                                                            <h3>e-Books</h3>
+                                                                            <a href="career-resources/career-resources/feature-ebooks/search-nlbEbookse605.html?q={{%20encodeUri(featuredIndustry.ebookCategory)%20}}"
+                                                                                ng-click="fnAnalytics('e-Books', featuredIndustry.category)"
+                                                                                class="textlink">
+                                                                                View More
+                                                                            </a>
+                                                                        </div>
+                                                                        <!--------------------------------------------------------------------->
+                                                                        <!------------------------------ MEDIAS ------------------------------->
+                                                                        <!--------------------------------------------------------------------->
+                                                                        <div class="card">
+                                                                            <div class="icon"><img
+                                                                                    src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_4.png">
+                                                                            </div>
+                                                                            <h3>Media</h3>
+                                                                            <a href="career-resources/career-resources5e71.html?q={{%20encodeUri(featuredIndustry.audioVideoKeyword)%20}}&amp;type=audio-and-videos"
+                                                                                ng-click="fnAnalytics('Media', featuredIndustry.category)"
+                                                                                class="textlink">
+                                                                                View More
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="contentblockpanel" id="featured-industries-panel"
+                                                        style="display: none;">
+                                                        <div ng-repeat="featuredIndustry in featuredIndustries"
+                                                            id="{{ featuredIndustry.referenceId }}"
+                                                            class="panel featuredskillsblock box1"
+                                                            ng-class="{active: $index == 0}">
+                                                            <div
+                                                                class="panel description small featuredIndustry {{ featuredIndustry.cssClass }}">
+                                                                <h6 ng-bind="featuredIndustry.category"></h6>
+                                                                <p class="featured-description">
+                                                                    {{ featuredIndustry.description | ellipsestring : 170 }}
+                                                                </p>
+                                                            </div>
+                                                            <!-- <div class="panel-body"> -->
+                                                            <!--------------------------------------------------------------------->
+                                                            <!------------------------------ COURSES ------------------------------>
+                                                            <!--------------------------------------------------------------------->
+                                                            <div class="card">
+                                                                <div class="icon"><img
+                                                                        src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_1.png">
+                                                                </div>
+                                                                <h3>Courses</h3>
+                                                                <a href="training-exchange/course-landing0cbf.html?industry={{%20encodeUri(featuredIndustry.courseKeyword)%20}}&amp;title={{encodeUri(featuredIndustry.category)}}"
+                                                                    ng-click="fnAnalytics('Courses', featuredIndustry.category)"
+                                                                    class="textlink">
+                                                                    View More
+                                                                </a>
+                                                            </div>
+                                                            <!--------------------------------------------------------------------->
+                                                            <!------------------------------ ARTICLES ----------------------------->
+                                                            <!--------------------------------------------------------------------->
+                                                            <div class="card">
+                                                                <div class="icon"><img
+                                                                        src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_2.png">
+                                                                </div>
+                                                                <h3>Articles</h3>
+                                                                <a href="career-resources/career-resources5606.html?q={{%20encodeUri(featuredIndustry.articleKeyword)%20}}"
+                                                                    ng-click="fnAnalytics('Articles', featuredIndustry.category)"
+                                                                    class="textlink">
+                                                                    View More
+                                                                </a>
+                                                            </div>
+                                                            <!--------------------------------------------------------------------->
+                                                            <!------------------------------ EBOOKS ------------------------------->
+                                                            <!--------------------------------------------------------------------->
+                                                            <div class="card">
+                                                                <div class="icon"><img
+                                                                        src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_3.png">
+                                                                </div>
+                                                                <h3>e-Books</h3>
+                                                                <a href="career-resources/career-resources/feature-ebooks/search-nlbEbookse605.html?q={{%20encodeUri(featuredIndustry.ebookCategory)%20}}"
+                                                                    ng-click="fnAnalytics('e-Books', featuredIndustry.category)"
+                                                                    class="textlink">
+                                                                    View More
+                                                                </a>
+                                                            </div>
+                                                            <!--------------------------------------------------------------------->
+                                                            <!------------------------------ MEDIAS ------------------------------->
+                                                            <!--------------------------------------------------------------------->
+                                                            <div class="card">
+                                                                <div class="icon"><img
+                                                                        src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_4.png">
+                                                                </div>
+                                                                <h3>Media</h3>
+                                                                <a href="career-resources/career-resources5e71.html?q={{%20encodeUri(featuredIndustry.audioVideoKeyword)%20}}&amp;type=audio-and-videos"
+                                                                    ng-click="fnAnalytics('Media', featuredIndustry.category)"
+                                                                    class="textlink">
+                                                                    View More
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
