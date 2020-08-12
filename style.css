@@ -4,3 +4,25 @@
     background-repeat: no-repeat;
     
 }
+.mans-mg{
+    background-image: url(./assets/office.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.contentblockpanel .panel.description.newcourses{
+   
+}
+
+.card-blue-in-section-fetsured{
+    z-index: 999;
+    position: absolute;
+    right: -40px;
+}
+.card-blue-in-courses{
+    margin-left: 20px !important;
+}
+.tabmodule_B .tabContent{
+    padding: 0 !important;
+}
