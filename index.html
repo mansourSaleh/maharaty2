@@ -11,6 +11,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <!-- Will override in child template -->
     <meta http-equiv="cache-control" content="max-age=0" />
+    <link rel="icon" href="./assets/logo-w.png" type="image/png">
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="expires" content="0" />
     <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
@@ -27,7 +28,7 @@
     <!-- Twitter card data -->
     <!-- <meta name="twitter:card" content="summary_large_image"> -->
     <!-- <meta name="twitter:site" content="@SkillsFutureSG"> -->
-    <meta name="twitter:title" content="مهاراتي">
+    <!-- <meta name="twitter:title" content="مهاراتي"> -->
     <!-- <meta name="twitter:description"> -->
     <!-- <meta name="twitter:creator" content="@SkillsFutureSG"> -->
     <!-- Twitter summary card with large image must be at least 280x150px -->
@@ -62,7 +63,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 
 
@@ -108,7 +110,7 @@
     </div>
 
     <!-- <noscript> -->
-        <!-- <img src="https://ad.doubleclick.net/ddm/activity/src=8189760;type=ssg_m0;cat=ssg190;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;ord=1?"
+    <!-- <img src="https://ad.doubleclick.net/ddm/activity/src=8189760;type=ssg_m0;cat=ssg190;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;ord=1?"
             width="1" height="1" alt="" /> -->
     <!-- </noscript> -->
     <!-- End of event snippet: Please do not remove -->"
@@ -221,14 +223,7 @@
     <div id="blackoutbox"> &nbsp; </div>
     <div id="spaceMaintenance"></div>
     <div id="cookieMessage">
-        <!--  
-Note: This implementation is done purely on the html page due to following.
-	1. To optimise page loading speed by retaining the logic at client side.
-	2. To work around Cloud Front caching, Dispatcher caching and Local Browser caching
-	3. To reuse the component across various portal's from 1 single source.
 
-Do consider the above before changing.
- -->
 
         <style>
             .close-cookie {
@@ -258,6 +253,23 @@ Do consider the above before changing.
             .cookie_message_close {
                 width: 0%;
                 /* padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto; */
+            }
+
+            .dark-green {
+                background-color: #51A196 !important;
+            }
+
+            .light-blue {
+                background-color: #28BECD !important;
+            }
+
+            .red {
+                background-color: #D16D70 !important;
+            }
+
+            .broun {
+                background-color: #4D4F4F !important;
+
             }
 
 
@@ -408,6 +420,7 @@ Do consider the above before changing.
                 #mysf-header .maintenance_message_text maintenance_message_close {
                     font-size: 16px;
                     color: #FFFFFF;
+                    background-color: #51A196 !important;
                 }
 
                 .maintenance_message_close {
@@ -484,7 +497,7 @@ Do consider the above before changing.
 
 
         </div>
-        <div class="navbar-default">
+        <div class="navbar-default dark-green">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -496,7 +509,7 @@ Do consider the above before changing.
                         <span class="icon-bar bottom-bar"></span>
                     </button>
                     <div class="btn-login navbar-toggle collapsed hidden-xs hidden-lg" data-bind="if : !isLoggedIn()">
-                        <div class="navbar-form">
+                        <div class="navbar-form dark-green">
                             <a href="javascript:void(0)"
                                 onclick="assignRoute(window.location.href); $UserLoginUtil.showLoginPopUp(); $UserLoginUtil.closeSideMenu();"
                                 class="btn btn-default">Login</a>
@@ -588,9 +601,9 @@ Do consider the above before changing.
                             class="icon_search"> -->
                     </a>
                     <!-- /ko -->
-                    <a class="navbar-brand" href="index.html">
-                        <!-- <img src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/header/logo_navi_3x.png"
-                            id="navbar-logo"> -->
+                    <a href="index.html">
+                        <img id="navbar-logo" src="./assets/logo-g.png" width="100" height="50"
+                            className="d-inline-block align-top" alt="React Bootstrap logo" />
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbar">
@@ -636,6 +649,7 @@ Do consider the above before changing.
                             </ul>
                         </li> -->
                         <!-- ko foreach : headerMenuList() -->
+
                         <li class="dropdown header_menu mobilehide">
                             <a class="headertop-title"
                                 data-bind="text : menuName, attr : { href : menuUrl() || '#' }">الدورات</a>
@@ -1328,7 +1342,7 @@ Do consider the above before changing.
 
                         <!-- ko if : isMenuNameDisplayed() -->
                         <li class="dropdown header_menu mobile-menu-item">
-                            <a>jhjhjhj</a>
+                            <a>GGG</a>
                             <!-- ko if : isMenuOpen() -->
                             <ul class="mobile-submenu-list">
                                 <li data-bind="if : isDisplayViewMore()" class="dropdown mobileviewmore">
@@ -1501,16 +1515,15 @@ Do consider the above before changing.
 
                     </li> -->
 
-                    <li data-bind="if : !isLoggedIn()" class="hidden-xs hidden-sm hidden-md">
-                        <div class="navbar-form">
-                            <a href="javascript:void(0)"
-                                onclick="assignRoute(window.location.href); $UserLoginUtil.showLoginPopUp(); $UserLoginUtil.closeSideMenu();"
-                                class="btn btn-default">Login</a>
+                    <li>
+                        <div class="navbar-form" style="background-color: #1D7B6B; top: 10px; position: relative">
+                            <a style="background-color: #1D7B6B; color: #FFF; ">تسجيل الدخول</a>
                         </div>
 
                     </li>
 
-                    <li class="hidden-sm hidden-md hidden-lg sitemap_mobilebox">
+
+                    <!-- <li class="hidden-sm hidden-md hidden-lg sitemap_mobilebox">
                         <div class="container">
                             <div class="row">
                                 <div class="col-xs-12 sitemapbox">
@@ -1543,7 +1556,7 @@ Do consider the above before changing.
                                 </div>
                             </div>
                         </div>
-                    </li>
+                    </li> -->
 
                     </ul>
                 </div>
@@ -1622,7 +1635,8 @@ Do consider the above before changing.
                                             <img src="./assets/office.jpg" class="d-block w-100" alt="..." />
                                             <div class="carousel-caption">
                                                 <div class="panel-group" style="margin-left: -90px;">
-                                                    <div class="panel-header article-content-desktop">sdfsd</div>
+                                                    <div class="panel-header article-content-desktop light-blue">sdfsd
+                                                    </div>
                                                     <div class="panel-header article-content-mobile">sdfsd</div>
                                                     <div class="panel-body">
                                                         <h3 class="article-content-desktop ">SGUnited Jobs & Skillsxx
@@ -1811,11 +1825,12 @@ Do consider the above before changing.
                                                 <div class="dragscroll_wrap">
 
                                                     <div class="contentblockpanel tabmodule_B"
-                                                        id="featured-industries-tabs" >
+                                                        id="featured-industries-tabs">
                                                         <div class="dragscroll_outterbox navbarbox">
                                                             <div class="dragscroll_innerbox dragscroll">
                                                                 <div class="dragscroll_wrap">
-                                                                    <ul class="nav nav-tabs" style="display: flex;">
+                                                                    <ul class="nav nav-tabs" id="li-s-active"
+                                                                        style="display: flex;">
                                                                         <!-- ngRepeat: featuredIndustry in featuredIndustries -->
                                                                         <li ng-repeat="featuredIndustry in featuredIndustries"
                                                                             ng-class="{active: $index == 0}"
@@ -2093,7 +2108,8 @@ Do consider the above before changing.
                                                 <div class="dragscroll_outterbox navbarbox">
                                                     <div class="dragscroll_innerbox dragscroll">
                                                         <div class="dragscroll_wrap">
-                                                            <ul class="nav nav-tabs" style="display: flex;">
+                                                            <ul class="nav nav-tabs" id="li-curses"
+                                                                style="display: flex;">
                                                                 <li class="active">
                                                                     <a data-toggle="tab" href="#newCourses"
                                                                         ng-click="changeTab($event)">جديد</a>
@@ -2132,594 +2148,664 @@ Do consider the above before changing.
                                                     </div>
                                                 </div>
                                                 <div class="dragscroll_outterbox">
-                                                        <div class="dragscroll_innerbox dragscroll">
-                                                            <div class="dragscroll_wrap tab-content">
-                                                                <div class="tab-pane  active in" id="newCourses">
-                                                                    <div class="contentblockpanel" style="display: flex;">
-                                                                        <div class="panel description small newcourses card-blue-in-courses">
-                                                                            <h3>دورات جديدة</h3>
-                                                                            <p>اكتشف  الدورات الجديدة , واشبع فضولك التعليمي من خلالها</p>
-                                                                        </div>
-                                                                        
-                                                                        <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
-                                                                                
-                                                                            <div class="imagetop  mans-mg" ng-click="toggleOverlay($event)">       
-                                                                                <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
-                                                                                    <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
-                                                                                        
-                                                                                    </div>
-                                                                                    <span class="ng-binding" style="right: 0; position: absolute;"> 1,600  ريال</span>
-                                                                                </div>
+                                                    <div class="dragscroll_innerbox dragscroll">
+                                                        <div class="dragscroll_wrap tab-content">
+                                                            <div class="tab-pane  active in" id="newCourses">
+                                                                <div class="contentblockpanel" style="display: flex;">
+                                                                    <div
+                                                                        class="panel description small newcourses card-blue-in-courses">
+                                                                        <h3>دورات جديدة</h3>
+                                                                        <p>اكتشف الدورات الجديدة , واشبع فضولك التعليمي
+                                                                            من خلالها</p>
+                                                                    </div>
 
+                                                                    <div class="card ng-scope"
+                                                                        ng-repeat="course in newCourses"
+                                                                        ng-init="course.tabName = 'New'"">
                                                                                 
-                                                                                <div class="fee_right" name="netspin">
-                                                                                    <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-                                                                                </div>
-                                                                                <!-- ngIf: course.displayImageName -->
+                                                                            <div class=" imagetop mans-mg"
+                                                                        ng-click="toggleOverlay($event)">
+                                                                        <div class="fee_left ng-scope"
+                                                                            style="right: 10px; bottom: 25px;">
+                                                                            <div class="subtitle text-right">٣٠ ساعة
+                                                                                <br>الرسوم
+
                                                                             </div>
-                                                                            <div class="card-body">
-                                                                                <h5 class="text-right">
-                                                                                        تعلم كذا وكذا
-                                                                                </h5>
-                                                                                <div class="category ng-binding text-right" >هندسة</div>
-                                                                                <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
-                                                                            </div>
+                                                                            <span class="ng-binding"
+                                                                                style="right: 0; position: absolute;">
+                                                                                1,600 ريال</span>
                                                                         </div>
 
-                                                                        <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
-                                                                                
-                                                                                <div class="imagetop  mans-mg" ng-click="toggleOverlay($event)">       
-                                                                                    <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
-                                                                                        <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
-                                                                                            
-                                                                                        </div>
-                                                                                        <span class="ng-binding" style="right: 0; position: absolute;"> 1,600  ريال</span>
-                                                                                    </div>
-    
-                                                                                    
-                                                                                    <div class="fee_right" name="netspin">
-                                                                                        <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-                                                                                    </div>
-                                                                                    <!-- ngIf: course.displayImageName -->
-                                                                                </div>
-                                                                                <div class="card-body">
-                                                                                    <h5 class="text-right">
-                                                                                            تعلم كذا وكذا
-                                                                                    </h5>
-                                                                                    <div class="category ng-binding text-right" >هندسة</div>
-                                                                                    <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
-                                                                                </div>
-                                                                            </div>
 
-                                                                            <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
-                                                                                
-                                                                                    <div class="imagetop  mans-mg" ng-click="toggleOverlay($event)">       
-                                                                                        <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
-                                                                                            <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
-                                                                                                
-                                                                                            </div>
-                                                                                            <span class="ng-binding" style="right: 0; position: absolute;"> 1,600  ريال</span>
-                                                                                        </div>
-        
-                                                                                        
-                                                                                        <div class="fee_right" name="netspin">
-                                                                                            <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-                                                                                        </div>
-                                                                                        <!-- ngIf: course.displayImageName -->
-                                                                                    </div>
-                                                                                    <div class="card-body">
-                                                                                        <h5 class="text-right">
-                                                                                                تعلم كذا وكذا
-                                                                                        </h5>
-                                                                                        <div class="category ng-binding text-right" >هندسة</div>
-                                                                                        <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
-                                                                                    </div>
-                                                                                </div>
-
-                                                                                <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
-                                                                                
-                                                                                        <div class="imagetop  mans-mg" ng-click="toggleOverlay($event)">       
-                                                                                            <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
-                                                                                                <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
-                                                                                                    
-                                                                                                </div>
-                                                                                                <span class="ng-binding" style="right: 0; position: absolute;"> 1,600  ريال</span>
-                                                                                            </div>
-            
-                                                                                            
-                                                                                            <div class="fee_right" name="netspin">
-                                                                                                <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-                                                                                            </div>
-                                                                                            <!-- ngIf: course.displayImageName -->
-                                                                                        </div>
-                                                                                        <div class="card-body">
-                                                                                            <h5 class="text-right">
-                                                                                                    تعلم كذا وكذا
-                                                                                            </h5>
-                                                                                            <div class="category ng-binding text-right" >هندسة</div>
-                                                                                            <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                       <!-- end ngRepeat: course in newCourses -->
+                                                                        <div class="fee_right" name="netspin">
+                                                                            <i class="fa fa-spinner fa-spin"
+                                                                                style="font-size:24px"></i>
+                                                                        </div>
+                                                                        <!-- ngIf: course.displayImageName -->
+                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <h5 class="text-right">
+                                                                            تعلم كذا وكذا
+                                                                        </h5>
+                                                                        <div class="category ng-binding text-right">
+                                                                            هندسة</div>
+                                                                        <div class="view text-right"><span
+                                                                                class="ng-binding">4</span> مشاهدات
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                           
-                                                                <div class="tab-pane  tabContent" id="popularCourses">
-                                                                    <div class="contentblockpanel" style="display: flex;">
-                                                                        <div class="panel description small popularcourses card-blue-in-courses">
-                                                                            <h3>الأكثر طلباً</h3>
-                                                                            <p>Learn more about these popular courses</p>
-                                                                        </div>
-                                                                        <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
-                                                                                
-                                                                                <div class="imagetop  mans-mg" ng-click="toggleOverlay($event)">       
-                                                                                    <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
-                                                                                        <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
-                                                                                            
-                                                                                        </div>
-                                                                                        <span class="ng-binding" style="right: 0; position: absolute;"> 1,600  ريال</span>
-                                                                                    </div>
-    
-                                                                                    
-                                                                                    <div class="fee_right" name="netspin">
-                                                                                        <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-                                                                                    </div>
-                                                                                    <!-- ngIf: course.displayImageName -->
-                                                                                </div>
-                                                                                <div class="card-body">
-                                                                                    <h5 class="text-right">
-                                                                                            تعلم كذا وكذا
-                                                                                    </h5>
-                                                                                    <div class="category ng-binding text-right" >هندسة</div>
-                                                                                    <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
-                                                                                </div>
-                                                                            </div>
 
-                                                                            <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
+                                                                <div class="card ng-scope"
+                                                                    ng-repeat="course in newCourses"
+                                                                    ng-init="course.tabName = 'New'"">
                                                                                 
-                                                                                    <div class="imagetop  mans-mg" ng-click="toggleOverlay($event)">       
-                                                                                        <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
-                                                                                            <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
-                                                                                                
-                                                                                            </div>
-                                                                                            <span class="ng-binding" style="right: 0; position: absolute;"> 1,600  ريال</span>
-                                                                                        </div>
-        
-                                                                                        
-                                                                                        <div class="fee_right" name="netspin">
-                                                                                            <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-                                                                                        </div>
-                                                                                        <!-- ngIf: course.displayImageName -->
-                                                                                    </div>
-                                                                                    <div class="card-body">
-                                                                                        <h5 class="text-right">
-                                                                                                تعلم كذا وكذا
-                                                                                        </h5>
-                                                                                        <div class="category ng-binding text-right" >هندسة</div>
-                                                                                        <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
-                                                                                    </div>
-                                                                                </div>
+                                                                                <div class=" imagetop mans-mg"
+                                                                    ng-click="toggleOverlay($event)">
+                                                                    <div class="fee_left ng-scope"
+                                                                        style="right: 10px; bottom: 25px;">
+                                                                        <div class="subtitle text-right">٣٠ ساعة
+                                                                            <br>الرسوم
 
-                                                                                <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
-                                                                                
-                                                                                        <div class="imagetop  mans-mg" ng-click="toggleOverlay($event)">       
-                                                                                            <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
-                                                                                                <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
-                                                                                                    
-                                                                                                </div>
-                                                                                                <span class="ng-binding" style="right: 0; position: absolute;"> 1,600  ريال</span>
-                                                                                            </div>
-            
-                                                                                            
-                                                                                            <div class="fee_right" name="netspin">
-                                                                                                <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-                                                                                            </div>
-                                                                                            <!-- ngIf: course.displayImageName -->
-                                                                                        </div>
-                                                                                        <div class="card-body">
-                                                                                            <h5 class="text-right">
-                                                                                                    تعلم كذا وكذا
-                                                                                            </h5>
-                                                                                            <div class="category ng-binding text-right" >هندسة</div>
-                                                                                            <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                        <!-- ngRepeat: course in popularCourses -->
-                                                                       <!-- end ngRepeat: course in popularCourses -->
+                                                                        </div>
+                                                                        <span class="ng-binding"
+                                                                            style="right: 0; position: absolute;"> 1,600
+                                                                            ريال</span>
                                                                     </div>
-                                                                </div>
-                                                                <div class="tab-pane  tabContent" id="nsfcCourses">
-                                                                    <div class="contentblockpanel" style="display: flex;">
-                                                                        <div class="panel description small newcourses card-blue-in-courses">
-                                                                            <h3>مجاناً \ دورات مجانية</h3>
-                                                                        </div>
-                                                                        <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
-                                                                                
-                                                                                <div class="imagetop  mans-mg" ng-click="toggleOverlay($event)">       
-                                                                                        <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
-                                                                                               
-                                                                                                <span class="ng-binding" style="right: 0; position: absolute;">مجانية</span>
-                                                                                            </div>
-    
-                                                                                    
-                                                                                    <div class="fee_right" name="netspin">
-                                                                                        <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-                                                                                    </div>
-                                                                                    <!-- ngIf: course.displayImageName -->
-                                                                                </div>
-                                                                                <div class="card-body">
-                                                                                    <h5 class="text-right">
-                                                                                            تعلم كذا وكذا
-                                                                                    </h5>
-                                                                                    <div class="category ng-binding text-right" >هندسة</div>
-                                                                                    <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
-                                                                                
-                                                                                    <div class="imagetop  mans-mg" ng-click="toggleOverlay($event)">       
-                                                                                            <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
-                                                                                               
-                                                                                                    <span class="ng-binding" style="right: 0; position: absolute;">مجانية</span>
-                                                                                                </div>
-        
-                                                                                        
-                                                                                        <div class="fee_right" name="netspin">
-                                                                                            <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-                                                                                        </div>
-                                                                                        <!-- ngIf: course.displayImageName -->
-                                                                                    </div>
-                                                                                    <div class="card-body">
-                                                                                        <h5 class="text-right">
-                                                                                                تعلم كذا وكذا
-                                                                                        </h5>
-                                                                                        <div class="category ng-binding text-right" >هندسة</div>
-                                                                                        <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
-                                                                                    </div>
-                                                                                </div>
-                                                                        <!-- ngRepeat: course in nsfcCourses -->
-                                                                        <!-- end ngRepeat: course in nsfcCourses -->
+
+
+                                                                    <div class="fee_right" name="netspin">
+                                                                        <i class="fa fa-spinner fa-spin"
+                                                                            style="font-size:24px"></i>
                                                                     </div>
+                                                                    <!-- ngIf: course.displayImageName -->
                                                                 </div>
-                                                               
-                                                                <div class="tab-pane  tabContent "  id="industryCourses0">
-                                                                        <div class="contentblockpanel" style="display: flex;">
-                                                                                <div class="panel description artsentertainment small  card-blue-in-courses ">
-                                                                                    <h3>دورات تقنية</h3>
-                                                                                    <p>اكتشف  الدورات الجديدة , واشبع فضولك التعليمي من خلالها</p>
-                                                                                </div>
+                                                                <div class="card-body">
+                                                                    <h5 class="text-right">
+                                                                        تعلم كذا وكذا
+                                                                    </h5>
+                                                                    <div class="category ng-binding text-right">هندسة
+                                                                    </div>
+                                                                    <div class="view text-right"><span
+                                                                            class="ng-binding">4</span> مشاهدات</div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="card ng-scope" ng-repeat="course in newCourses"
+                                                                ng-init="course.tabName = 'New'"">
                                                                                 
-                                                                                <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
-                                                                                        
-                                                                                    <div class="imagetop  mans-mg" ng-click="toggleOverlay($event)">       
-                                                                                        <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
-                                                                                            <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
-                                                                                                
-                                                                                            </div>
-                                                                                            <span class="ng-binding" style="right: 0; position: absolute;"> 1,600  ريال</span>
-                                                                                        </div>
-        
-                                                                                        
-                                                                                        <div class="fee_right" name="netspin">
-                                                                                            <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-                                                                                        </div>
-                                                                                        <!-- ngIf: course.displayImageName -->
-                                                                                    </div>
-                                                                                    <div class="card-body">
-                                                                                        <h5 class="text-right">
-                                                                                                تعلم كذا وكذا
-                                                                                        </h5>
-                                                                                        <div class="category ng-binding text-right" >هندسة</div>
-                                                                                        <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
-                                                                                    </div>
-                                                                                </div>
-        
-                                                                                <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
-                                                                                        
-                                                                                        <div class="imagetop  mans-mg" ng-click="toggleOverlay($event)">       
-                                                                                            <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
-                                                                                                <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
-                                                                                                    
-                                                                                                </div>
-                                                                                                <span class="ng-binding" style="right: 0; position: absolute;"> 1,600  ريال</span>
-                                                                                            </div>
-            
-                                                                                            
-                                                                                            <div class="fee_right" name="netspin">
-                                                                                                <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-                                                                                            </div>
-                                                                                            <!-- ngIf: course.displayImageName -->
-                                                                                        </div>
-                                                                                        <div class="card-body">
-                                                                                            <h5 class="text-right">
-                                                                                                    تعلم كذا وكذا
-                                                                                            </h5>
-                                                                                            <div class="category ng-binding text-right" >هندسة</div>
-                                                                                            <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
-                                                                                        </div>
-                                                                                    </div>
-        
-                                                                                    <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
-                                                                                        
-                                                                                            <div class="imagetop  mans-mg" ng-click="toggleOverlay($event)">       
-                                                                                                <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
-                                                                                                    <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
-                                                                                                        
-                                                                                                    </div>
-                                                                                                    <span class="ng-binding" style="right: 0; position: absolute;"> 1,600  ريال</span>
-                                                                                                </div>
-                
-                                                                                                
-                                                                                                <div class="fee_right" name="netspin">
-                                                                                                    <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-                                                                                                </div>
-                                                                                                <!-- ngIf: course.displayImageName -->
-                                                                                            </div>
-                                                                                            <div class="card-body">
-                                                                                                <h5 class="text-right">
-                                                                                                        تعلم كذا وكذا
-                                                                                                </h5>
-                                                                                                <div class="category ng-binding text-right" >هندسة</div>
-                                                                                                <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
-                                                                                            </div>
-                                                                                        </div>
-        
-                                                                                        <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
-                                                                                        
-                                                                                                <div class="imagetop  mans-mg" ng-click="toggleOverlay($event)">       
-                                                                                                    <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
-                                                                                                        <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
-                                                                                                            
-                                                                                                        </div>
-                                                                                                        <span class="ng-binding" style="right: 0; position: absolute;"> 1,600  ريال</span>
-                                                                                                    </div>
-                    
-                                                                                                    
-                                                                                                    <div class="fee_right" name="netspin">
-                                                                                                        <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-                                                                                                    </div>
-                                                                                                    <!-- ngIf: course.displayImageName -->
-                                                                                                </div>
-                                                                                                <div class="card-body">
-                                                                                                    <h5 class="text-right">
-                                                                                                            تعلم كذا وكذا
-                                                                                                    </h5>
-                                                                                                    <div class="category ng-binding text-right" >هندسة</div>
-                                                                                                    <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                               <!-- end ngRepeat: course in newCourses -->
-                                                                            </div>
+                                                                                    <div class=" imagetop mans-mg"
+                                                                ng-click="toggleOverlay($event)">
+                                                                <div class="fee_left ng-scope"
+                                                                    style="right: 10px; bottom: 25px;">
+                                                                    <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
+
+                                                                    </div>
+                                                                    <span class="ng-binding"
+                                                                        style="right: 0; position: absolute;"> 1,600
+                                                                        ريال</span>
                                                                 </div>
-                                                                <div class="tab-pane  tabContent ng-scope" ng-if="!isLogin || isEmptyIndustryCourses"
-                                                                    ng-repeat="industryCourse in industryCoursesCommon" id="industryCourses1">
-                                                                    <div class="contentblockpanel" style="display: flex;">
-                                                                            <div class="panel description small artsentertainment card-blue-in-courses">
-                                                                                <h3>دورات محاسبة</h3>
-                                                                                <p>اكتشف  الدورات الجديدة , واشبع فضولك التعليمي من خلالها</p>
-                                                                            </div>
-                                                                            
-                                                                            <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
-                                                                                    
-                                                                                <div class="imagetop  mans-mg" ng-click="toggleOverlay($event)">       
-                                                                                    <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
-                                                                                        <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
-                                                                                            
-                                                                                        </div>
-                                                                                        <span class="ng-binding" style="right: 0; position: absolute;"> 1,600  ريال</span>
-                                                                                    </div>
-    
-                                                                                    
-                                                                                    <div class="fee_right" name="netspin">
-                                                                                        <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-                                                                                    </div>
-                                                                                    <!-- ngIf: course.displayImageName -->
-                                                                                </div>
-                                                                                <div class="card-body">
-                                                                                    <h5 class="text-right">
-                                                                                            تعلم كذا وكذا
-                                                                                    </h5>
-                                                                                    <div class="category ng-binding text-right" >هندسة</div>
-                                                                                    <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
-                                                                                </div>
-                                                                            </div>
-    
-                                                                            <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
-                                                                                    
-                                                                                    <div class="imagetop  mans-mg" ng-click="toggleOverlay($event)">       
-                                                                                        <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
-                                                                                            <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
-                                                                                                
-                                                                                            </div>
-                                                                                            <span class="ng-binding" style="right: 0; position: absolute;"> 1,600  ريال</span>
-                                                                                        </div>
-        
-                                                                                        
-                                                                                        <div class="fee_right" name="netspin">
-                                                                                            <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-                                                                                        </div>
-                                                                                        <!-- ngIf: course.displayImageName -->
-                                                                                    </div>
-                                                                                    <div class="card-body">
-                                                                                        <h5 class="text-right">
-                                                                                                تعلم كذا وكذا
-                                                                                        </h5>
-                                                                                        <div class="category ng-binding text-right" >هندسة</div>
-                                                                                        <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
-                                                                                    </div>
-                                                                                </div>
-    
-                                                                                <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
-                                                                                    
-                                                                                        <div class="imagetop  mans-mg" ng-click="toggleOverlay($event)">       
-                                                                                            <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
-                                                                                                <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
-                                                                                                    
-                                                                                                </div>
-                                                                                                <span class="ng-binding" style="right: 0; position: absolute;"> 1,600  ريال</span>
-                                                                                            </div>
-            
-                                                                                            
-                                                                                            <div class="fee_right" name="netspin">
-                                                                                                <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-                                                                                            </div>
-                                                                                            <!-- ngIf: course.displayImageName -->
-                                                                                        </div>
-                                                                                        <div class="card-body">
-                                                                                            <h5 class="text-right">
-                                                                                                    تعلم كذا وكذا
-                                                                                            </h5>
-                                                                                            <div class="category ng-binding text-right" >هندسة</div>
-                                                                                            <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
-                                                                                        </div>
-                                                                                    </div>
-    
-                                                                                    <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
-                                                                                    
-                                                                                            <div class="imagetop  mans-mg" ng-click="toggleOverlay($event)">       
-                                                                                                <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
-                                                                                                    <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
-                                                                                                        
-                                                                                                    </div>
-                                                                                                    <span class="ng-binding" style="right: 0; position: absolute;"> 1,600  ريال</span>
-                                                                                                </div>
-                
-                                                                                                
-                                                                                                <div class="fee_right" name="netspin">
-                                                                                                    <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-                                                                                                </div>
-                                                                                                <!-- ngIf: course.displayImageName -->
-                                                                                            </div>
-                                                                                            <div class="card-body">
-                                                                                                <h5 class="text-right">
-                                                                                                        تعلم كذا وكذا
-                                                                                                </h5>
-                                                                                                <div class="category ng-binding text-right" >هندسة</div>
-                                                                                                <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                           <!-- end ngRepeat: course in newCourses -->
-                                                                        </div>
+
+
+                                                                <div class="fee_right" name="netspin">
+                                                                    <i class="fa fa-spinner fa-spin"
+                                                                        style="font-size:24px"></i>
                                                                 </div>
-                                                                <div class="tab-pane  tabContent ng-scope" ng-if="!isLogin || isEmptyIndustryCourses"
-                                                                    ng-repeat="industryCourse in industryCoursesCommon" id="industryCourses2">
-                                                                    <div class="contentblockpanel" style="display: flex;">
-                                                                            <div class="panel description small newcourses card-blue-in-courses">
-                                                                                <h3>دورات تصميم</h3>
-                                                                                <p>اكتشف  الدورات الجديدة , واشبع فضولك التعليمي من خلالها</p>
-                                                                            </div>
-                                                                            
-                                                                            <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
-                                                                                    
-                                                                                <div class="imagetop  mans-mg" ng-click="toggleOverlay($event)">       
-                                                                                    <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
-                                                                                        <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
-                                                                                            
-                                                                                        </div>
-                                                                                        <span class="ng-binding" style="right: 0; position: absolute;"> 1,600  ريال</span>
-                                                                                    </div>
-    
-                                                                                    
-                                                                                    <div class="fee_right" name="netspin">
-                                                                                        <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-                                                                                    </div>
-                                                                                    <!-- ngIf: course.displayImageName -->
-                                                                                </div>
-                                                                                <div class="card-body">
-                                                                                    <h5 class="text-right">
-                                                                                            تعلم كذا وكذا
-                                                                                    </h5>
-                                                                                    <div class="category ng-binding text-right" >هندسة</div>
-                                                                                    <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
-                                                                                </div>
-                                                                            </div>
-    
-                                                                            <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
-                                                                                    
-                                                                                    <div class="imagetop  mans-mg" ng-click="toggleOverlay($event)">       
-                                                                                        <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
-                                                                                            <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
-                                                                                                
-                                                                                            </div>
-                                                                                            <span class="ng-binding" style="right: 0; position: absolute;"> 1,600  ريال</span>
-                                                                                        </div>
-        
-                                                                                        
-                                                                                        <div class="fee_right" name="netspin">
-                                                                                            <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-                                                                                        </div>
-                                                                                        <!-- ngIf: course.displayImageName -->
-                                                                                    </div>
-                                                                                    <div class="card-body">
-                                                                                        <h5 class="text-right">
-                                                                                                تعلم كذا وكذا
-                                                                                        </h5>
-                                                                                        <div class="category ng-binding text-right" >هندسة</div>
-                                                                                        <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
-                                                                                    </div>
-                                                                                </div>
-    
-                                                                                <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
-                                                                                    
-                                                                                        <div class="imagetop  mans-mg" ng-click="toggleOverlay($event)">       
-                                                                                            <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
-                                                                                                <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
-                                                                                                    
-                                                                                                </div>
-                                                                                                <span class="ng-binding" style="right: 0; position: absolute;"> 1,600  ريال</span>
-                                                                                            </div>
-            
-                                                                                            
-                                                                                            <div class="fee_right" name="netspin">
-                                                                                                <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-                                                                                            </div>
-                                                                                            <!-- ngIf: course.displayImageName -->
-                                                                                        </div>
-                                                                                        <div class="card-body">
-                                                                                            <h5 class="text-right">
-                                                                                                    تعلم كذا وكذا
-                                                                                            </h5>
-                                                                                            <div class="category ng-binding text-right" >هندسة</div>
-                                                                                            <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
-                                                                                        </div>
-                                                                                    </div>
-    
-                                                                                    <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
-                                                                                    
-                                                                                            <div class="imagetop  mans-mg" ng-click="toggleOverlay($event)">       
-                                                                                                <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
-                                                                                                    <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
-                                                                                                        
-                                                                                                    </div>
-                                                                                                    <span class="ng-binding" style="right: 0; position: absolute;"> 1,600  ريال</span>
-                                                                                                </div>
-                
-                                                                                                
-                                                                                                <div class="fee_right" name="netspin">
-                                                                                                    <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-                                                                                                </div>
-                                                                                                <!-- ngIf: course.displayImageName -->
-                                                                                            </div>
-                                                                                            <div class="card-body">
-                                                                                                <h5 class="text-right">
-                                                                                                        تعلم كذا وكذا
-                                                                                                </h5>
-                                                                                                <div class="category ng-binding text-right" >هندسة</div>
-                                                                                                <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                           <!-- end ngRepeat: course in newCourses -->
-                                                                        </div>
-                                                                </div>
-                                                               
-                                                               <!-- end ngIf: !isLogin || isEmptyIndustryCourses -->
-                                                                <!-- end ngRepeat: industryCourse in industryCoursesCommon -->
+                                                                <!-- ngIf: course.displayImageName -->
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <h5 class="text-right">
+                                                                    تعلم كذا وكذا
+                                                                </h5>
+                                                                <div class="category ng-binding text-right">هندسة</div>
+                                                                <div class="view text-right"><span
+                                                                        class="ng-binding">4</span> مشاهدات</div>
                                                             </div>
                                                         </div>
+
+                                                        <div class="card ng-scope" ng-repeat="course in newCourses"
+                                                            ng-init="course.tabName = 'New'"">
+                                                                                
+                                                                                        <div class=" imagetop mans-mg"
+                                                            ng-click="toggleOverlay($event)">
+                                                            <div class="fee_left ng-scope"
+                                                                style="right: 10px; bottom: 25px;">
+                                                                <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
+
+                                                                </div>
+                                                                <span class="ng-binding"
+                                                                    style="right: 0; position: absolute;"> 1,600
+                                                                    ريال</span>
+                                                            </div>
+
+
+                                                            <div class="fee_right" name="netspin">
+                                                                <i class="fa fa-spinner fa-spin"
+                                                                    style="font-size:24px"></i>
+                                                            </div>
+                                                            <!-- ngIf: course.displayImageName -->
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <h5 class="text-right">
+                                                                تعلم كذا وكذا
+                                                            </h5>
+                                                            <div class="category ng-binding text-right">هندسة</div>
+                                                            <div class="view text-right"><span
+                                                                    class="ng-binding">4</span> مشاهدات</div>
+                                                        </div>
                                                     </div>
+                                                    <!-- end ngRepeat: course in newCourses -->
+                                                </div>
+                                            </div>
+
+                                            <div class="tab-pane  tabContent" id="popularCourses">
+                                                <div class="contentblockpanel" style="display: flex;">
+                                                    <div
+                                                        class="panel description small popularcourses card-blue-in-courses">
+                                                        <h3>الأكثر طلباً</h3>
+                                                        <p>Learn more about these popular courses</p>
+                                                    </div>
+                                                    <div class="card ng-scope" ng-repeat="course in newCourses"
+                                                        ng-init="course.tabName = 'New'"">
+                                                                                
+                                                                                <div class=" imagetop mans-mg"
+                                                        ng-click="toggleOverlay($event)">
+                                                        <div class="fee_left ng-scope"
+                                                            style="right: 10px; bottom: 25px;">
+                                                            <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
+
+                                                            </div>
+                                                            <span class="ng-binding"
+                                                                style="right: 0; position: absolute;"> 1,600 ريال</span>
+                                                        </div>
+
+
+                                                        <div class="fee_right" name="netspin">
+                                                            <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+                                                        </div>
+                                                        <!-- ngIf: course.displayImageName -->
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <h5 class="text-right">
+                                                            تعلم كذا وكذا
+                                                        </h5>
+                                                        <div class="category ng-binding text-right">هندسة</div>
+                                                        <div class="view text-right"><span class="ng-binding">4</span>
+                                                            مشاهدات</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card ng-scope" ng-repeat="course in newCourses"
+                                                    ng-init="course.tabName = 'New'"">
+                                                                                
+                                                                                    <div class=" imagetop mans-mg"
+                                                    ng-click="toggleOverlay($event)">
+                                                    <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
+                                                        <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
+
+                                                        </div>
+                                                        <span class="ng-binding" style="right: 0; position: absolute;">
+                                                            1,600 ريال</span>
+                                                    </div>
+
+
+                                                    <div class="fee_right" name="netspin">
+                                                        <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+                                                    </div>
+                                                    <!-- ngIf: course.displayImageName -->
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="text-right">
+                                                        تعلم كذا وكذا
+                                                    </h5>
+                                                    <div class="category ng-binding text-right">هندسة</div>
+                                                    <div class="view text-right"><span class="ng-binding">4</span>
+                                                        مشاهدات</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card ng-scope" ng-repeat="course in newCourses"
+                                                ng-init="course.tabName = 'New'"">
+                                                                                
+                                                                                        <div class=" imagetop mans-mg"
+                                                ng-click="toggleOverlay($event)">
+                                                <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
+                                                    <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
+
+                                                    </div>
+                                                    <span class="ng-binding" style="right: 0; position: absolute;">
+                                                        1,600 ريال</span>
+                                                </div>
+
+
+                                                <div class="fee_right" name="netspin">
+                                                    <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+                                                </div>
+                                                <!-- ngIf: course.displayImageName -->
+                                            </div>
+                                            <div class="card-body">
+                                                <h5 class="text-right">
+                                                    تعلم كذا وكذا
+                                                </h5>
+                                                <div class="category ng-binding text-right">هندسة</div>
+                                                <div class="view text-right"><span class="ng-binding">4</span> مشاهدات
+                                                </div>
                                             </div>
                                         </div>
-                                        <!-- <div class="tabmodule_B" id="tabset_B" style="display: none;">
+                                        <!-- ngRepeat: course in popularCourses -->
+                                        <!-- end ngRepeat: course in popularCourses -->
+                                    </div>
+                                </div>
+                                <div class="tab-pane  tabContent" id="nsfcCourses">
+                                    <div class="contentblockpanel" style="display: flex;">
+                                        <div class="panel description small newcourses card-blue-in-courses">
+                                            <h3>مجاناً \ دورات مجانية</h3>
+                                        </div>
+                                        <div class="card ng-scope" ng-repeat="course in newCourses"
+                                            ng-init="course.tabName = 'New'"">
+                                                                                
+                                                                                <div class=" imagetop mans-mg"
+                                            ng-click="toggleOverlay($event)">
+                                            <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
+
+                                                <span class="ng-binding"
+                                                    style="right: 0; position: absolute;">مجانية</span>
+                                            </div>
+
+
+                                            <div class="fee_right" name="netspin">
+                                                <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+                                            </div>
+                                            <!-- ngIf: course.displayImageName -->
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="text-right">
+                                                تعلم كذا وكذا
+                                            </h5>
+                                            <div class="category ng-binding text-right">هندسة</div>
+                                            <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
+                                        </div>
+                                    </div>
+                                    <div class="card ng-scope" ng-repeat="course in newCourses"
+                                        ng-init="course.tabName = 'New'"">
+                                                                                
+                                                                                    <div class=" imagetop mans-mg"
+                                        ng-click="toggleOverlay($event)">
+                                        <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
+
+                                            <span class="ng-binding" style="right: 0; position: absolute;">مجانية</span>
+                                        </div>
+
+
+                                        <div class="fee_right" name="netspin">
+                                            <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+                                        </div>
+                                        <!-- ngIf: course.displayImageName -->
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="text-right">
+                                            تعلم كذا وكذا
+                                        </h5>
+                                        <div class="category ng-binding text-right">هندسة</div>
+                                        <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
+                                    </div>
+                                </div>
+                                <!-- ngRepeat: course in nsfcCourses -->
+                                <!-- end ngRepeat: course in nsfcCourses -->
+                            </div>
+                        </div>
+
+                        <div class="tab-pane  tabContent " id="industryCourses0">
+                            <div class="contentblockpanel" style="display: flex;">
+                                <div class="panel description artsentertainment small  card-blue-in-courses ">
+                                    <h3>دورات تقنية</h3>
+                                    <p>اكتشف الدورات الجديدة , واشبع فضولك التعليمي من خلالها</p>
+                                </div>
+
+                                <div class="card ng-scope" ng-repeat="course in newCourses"
+                                    ng-init="course.tabName = 'New'"">
+                                                                                        
+                                                                                    <div class=" imagetop mans-mg"
+                                    ng-click="toggleOverlay($event)">
+                                    <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
+                                        <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
+
+                                        </div>
+                                        <span class="ng-binding" style="right: 0; position: absolute;"> 1,600
+                                            ريال</span>
+                                    </div>
+
+
+                                    <div class="fee_right" name="netspin">
+                                        <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+                                    </div>
+                                    <!-- ngIf: course.displayImageName -->
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="text-right">
+                                        تعلم كذا وكذا
+                                    </h5>
+                                    <div class="category ng-binding text-right">هندسة</div>
+                                    <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
+                                </div>
+                            </div>
+
+                            <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
+                                                                                        
+                                                                                        <div class=" imagetop mans-mg"
+                                ng-click="toggleOverlay($event)">
+                                <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
+                                    <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
+
+                                    </div>
+                                    <span class="ng-binding" style="right: 0; position: absolute;"> 1,600 ريال</span>
+                                </div>
+
+
+                                <div class="fee_right" name="netspin">
+                                    <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+                                </div>
+                                <!-- ngIf: course.displayImageName -->
+                            </div>
+                            <div class="card-body">
+                                <h5 class="text-right">
+                                    تعلم كذا وكذا
+                                </h5>
+                                <div class="category ng-binding text-right">هندسة</div>
+                                <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
+                            </div>
+                        </div>
+
+                        <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
+                                                                                        
+                                                                                            <div class=" imagetop
+                            mans-mg" ng-click="toggleOverlay($event)">
+                            <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
+                                <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
+
+                                </div>
+                                <span class="ng-binding" style="right: 0; position: absolute;"> 1,600 ريال</span>
+                            </div>
+
+
+                            <div class="fee_right" name="netspin">
+                                <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+                            </div>
+                            <!-- ngIf: course.displayImageName -->
+                        </div>
+                        <div class="card-body">
+                            <h5 class="text-right">
+                                تعلم كذا وكذا
+                            </h5>
+                            <div class="category ng-binding text-right">هندسة</div>
+                            <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
+                        </div>
+                    </div>
+
+                    <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
+                                                                                        
+                                                                                                <div class=" imagetop
+                        mans-mg" ng-click="toggleOverlay($event)">
+                        <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
+                            <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
+
+                            </div>
+                            <span class="ng-binding" style="right: 0; position: absolute;"> 1,600 ريال</span>
+                        </div>
+
+
+                        <div class="fee_right" name="netspin">
+                            <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+                        </div>
+                        <!-- ngIf: course.displayImageName -->
+                    </div>
+                    <div class="card-body">
+                        <h5 class="text-right">
+                            تعلم كذا وكذا
+                        </h5>
+                        <div class="category ng-binding text-right">هندسة</div>
+                        <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
+                    </div>
+                </div>
+                <!-- end ngRepeat: course in newCourses -->
+        </div>
+        </div>
+        <div class="tab-pane  tabContent ng-scope" ng-if="!isLogin || isEmptyIndustryCourses"
+            ng-repeat="industryCourse in industryCoursesCommon" id="industryCourses1">
+            <div class="contentblockpanel" style="display: flex;">
+                <div class="panel description small artsentertainment card-blue-in-courses">
+                    <h3>دورات محاسبة</h3>
+                    <p>اكتشف الدورات الجديدة , واشبع فضولك التعليمي من خلالها</p>
+                </div>
+
+                <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
+                                                                                    
+                                                                                <div class=" imagetop mans-mg"
+                    ng-click="toggleOverlay($event)">
+                    <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
+                        <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
+
+                        </div>
+                        <span class="ng-binding" style="right: 0; position: absolute;"> 1,600 ريال</span>
+                    </div>
+
+
+                    <div class="fee_right" name="netspin">
+                        <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+                    </div>
+                    <!-- ngIf: course.displayImageName -->
+                </div>
+                <div class="card-body">
+                    <h5 class="text-right">
+                        تعلم كذا وكذا
+                    </h5>
+                    <div class="category ng-binding text-right">هندسة</div>
+                    <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
+                </div>
+            </div>
+
+            <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
+                                                                                    
+                                                                                    <div class=" imagetop mans-mg"
+                ng-click="toggleOverlay($event)">
+                <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
+                    <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
+
+                    </div>
+                    <span class="ng-binding" style="right: 0; position: absolute;"> 1,600 ريال</span>
+                </div>
+
+
+                <div class="fee_right" name="netspin">
+                    <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+                </div>
+                <!-- ngIf: course.displayImageName -->
+            </div>
+            <div class="card-body">
+                <h5 class="text-right">
+                    تعلم كذا وكذا
+                </h5>
+                <div class="category ng-binding text-right">هندسة</div>
+                <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
+            </div>
+        </div>
+
+        <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
+                                                                                    
+                                                                                        <div class=" imagetop mans-mg"
+            ng-click="toggleOverlay($event)">
+            <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
+                <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
+
+                </div>
+                <span class="ng-binding" style="right: 0; position: absolute;"> 1,600 ريال</span>
+            </div>
+
+
+            <div class="fee_right" name="netspin">
+                <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+            </div>
+            <!-- ngIf: course.displayImageName -->
+        </div>
+        <div class="card-body">
+            <h5 class="text-right">
+                تعلم كذا وكذا
+            </h5>
+            <div class="category ng-binding text-right">هندسة</div>
+            <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
+        </div>
+        </div>
+
+        <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
+                                                                                    
+                                                                                            <div class=" imagetop
+            mans-mg" ng-click="toggleOverlay($event)">
+            <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
+                <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
+
+                </div>
+                <span class="ng-binding" style="right: 0; position: absolute;"> 1,600 ريال</span>
+            </div>
+
+
+            <div class="fee_right" name="netspin">
+                <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+            </div>
+            <!-- ngIf: course.displayImageName -->
+        </div>
+        <div class="card-body">
+            <h5 class="text-right">
+                تعلم كذا وكذا
+            </h5>
+            <div class="category ng-binding text-right">هندسة</div>
+            <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
+        </div>
+        </div>
+        <!-- end ngRepeat: course in newCourses -->
+        </div>
+        </div>
+        <div class="tab-pane  tabContent ng-scope" ng-if="!isLogin || isEmptyIndustryCourses"
+            ng-repeat="industryCourse in industryCoursesCommon" id="industryCourses2">
+            <div class="contentblockpanel" style="display: flex;">
+                <div class="panel description small newcourses card-blue-in-courses">
+                    <h3>دورات تصميم</h3>
+                    <p>اكتشف الدورات الجديدة , واشبع فضولك التعليمي من خلالها</p>
+                </div>
+
+                <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
+                                                                                    
+                                                                                <div class=" imagetop mans-mg"
+                    ng-click="toggleOverlay($event)">
+                    <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
+                        <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
+
+                        </div>
+                        <span class="ng-binding" style="right: 0; position: absolute;"> 1,600 ريال</span>
+                    </div>
+
+
+                    <div class="fee_right" name="netspin">
+                        <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+                    </div>
+                    <!-- ngIf: course.displayImageName -->
+                </div>
+                <div class="card-body">
+                    <h5 class="text-right">
+                        تعلم كذا وكذا
+                    </h5>
+                    <div class="category ng-binding text-right">هندسة</div>
+                    <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
+                </div>
+            </div>
+
+            <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
+                                                                                    
+                                                                                    <div class=" imagetop mans-mg"
+                ng-click="toggleOverlay($event)">
+                <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
+                    <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
+
+                    </div>
+                    <span class="ng-binding" style="right: 0; position: absolute;"> 1,600 ريال</span>
+                </div>
+
+
+                <div class="fee_right" name="netspin">
+                    <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+                </div>
+                <!-- ngIf: course.displayImageName -->
+            </div>
+            <div class="card-body">
+                <h5 class="text-right">
+                    تعلم كذا وكذا
+                </h5>
+                <div class="category ng-binding text-right">هندسة</div>
+                <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
+            </div>
+        </div>
+
+        <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
+                                                                                    
+                                                                                        <div class=" imagetop mans-mg"
+            ng-click="toggleOverlay($event)">
+            <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
+                <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
+
+                </div>
+                <span class="ng-binding" style="right: 0; position: absolute;"> 1,600 ريال</span>
+            </div>
+
+
+            <div class="fee_right" name="netspin">
+                <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+            </div>
+            <!-- ngIf: course.displayImageName -->
+        </div>
+        <div class="card-body">
+            <h5 class="text-right">
+                تعلم كذا وكذا
+            </h5>
+            <div class="category ng-binding text-right">هندسة</div>
+            <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
+        </div>
+        </div>
+
+        <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
+                                                                                    
+                                                                                            <div class=" imagetop
+            mans-mg" ng-click="toggleOverlay($event)">
+            <div class="fee_left ng-scope" style="right: 10px; bottom: 25px;">
+                <div class="subtitle text-right">٣٠ ساعة <br>الرسوم
+
+                </div>
+                <span class="ng-binding" style="right: 0; position: absolute;"> 1,600 ريال</span>
+            </div>
+
+
+            <div class="fee_right" name="netspin">
+                <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+            </div>
+            <!-- ngIf: course.displayImageName -->
+        </div>
+        <div class="card-body">
+            <h5 class="text-right">
+                تعلم كذا وكذا
+            </h5>
+            <div class="category ng-binding text-right">هندسة</div>
+            <div class="view text-right"><span class="ng-binding">4</span> مشاهدات</div>
+        </div>
+        </div>
+        <!-- end ngRepeat: course in newCourses -->
+        </div>
+        </div>
+
+        <!-- end ngIf: !isLogin || isEmptyIndustryCourses -->
+        <!-- end ngRepeat: industryCourse in industryCoursesCommon -->
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <!-- <div class="tabmodule_B" id="tabset_B" style="display: none;">
                                             <div class="dragscroll_outterbox navbarbox">
                                                 <div class="dragscroll_innerbox dragscroll">
                                                     <div class="dragscroll_wrap">
@@ -2761,11 +2847,11 @@ Do consider the above before changing.
                                             </div>
                                            
                                         </div> -->
-                                    </div>
-                                </div>
-                            </div>
+        </div>
+        </div>
+        </div>
 
-                            <!-- <script type="text/javascript">
+        <!-- <script type="text/javascript">
     var homeCoursesOpts = {
    		lengthOfNew : '60',
    		resourceName : 'courses',
@@ -2774,424 +2860,158 @@ Do consider the above before changing.
     new HomeCourses(homeCoursesOpts).init();
 </script> -->
 
-                        </div>
-                    
+        </div>
 
 
 
 
-                        <div class="featured-skills list parbase">
-                            <div class="container featuredskills" ng-modules="featuredSkillsApp"
-                                ng-controller="featuredSkillsCtrl" id="featured-skills">
-                                <div class="row">
-                                    <div class="col-xs-12" style="direction: rtl;">
-                                        <h1>المهارات المطلوبة</h1>
-                                        <div class="dragscroll_outterbox">
-                                            <div class="dragscroll_innerbox dragscroll">
-                                                <div class="dragscroll_wrap">
-                                                   
-                                                    <div class="contentblockpanel" id="featured-skills-slick"
-                                                        style="display: flex;">
-                                                        <div ng-repeat="featuredSkill in featuredSkills"
-                                                            class="panel featuredskillsblock box1 ">
-                                                            <div
-                                                                class="panel description small featuredSkill " style="position: absolute;
+
+        <div class="featured-skills list parbase">
+            <div class="container featuredskills" ng-modules="featuredSkillsApp" ng-controller="featuredSkillsCtrl"
+                id="featured-skills">
+                <div class="row">
+                    <div class="col-xs-12" style="direction: rtl;">
+                        <h1>المهارات المطلوبة</h1>
+                        <div class="dragscroll_outterbox">
+                            <div class="dragscroll_innerbox dragscroll">
+                                <div class="dragscroll_wrap">
+
+                                    <div class="contentblockpanel" id="featured-skills-slick" style="display: flex;">
+                                        <div ng-repeat="featuredSkill in featuredSkills"
+                                            class="panel featuredskillsblock box1 ">
+                                            <div class="panel description small featuredSkill " style="position: absolute;
                                                                 right: -20px;
                                                                 margin: 20px;">
-                                                                <h6 ng-bind="featuredSkill.category">مهارات مطلوبة لسوق العمل</h6>
-                                                                <p class="featured-description">
-                                                                   مسيبتن مستيبشمسيب سيبنش
-                                                                </p>
-                                                            </div>
-                                                            <!-- <div class="panel-body"> -->
-                                                            <!--------------------------------------------------------------------->
-                                                            <!-------------------- iTalent / iSkills ------------------------------>
-                                                            <!--------------------------------------------------------------------->
-                                                            <div class="card" ng-if="featuredSkill.iTalentUrl">
-                                                                <div class="icon text-center"><img
-                                                                        src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/italent_skills.png">
-                                                                </div>
-                                                                <h3 class="text-center" >iTalent / iSkills<br />
-                                                                <a href="" class="textlink text-right"
-                                                                    >
-                                                                    View More
-                                                                </a>
-                                                            </h3>
-                                                                <div class="divider"></div>
-                                                                <h5 class="text-right" >
-                                                                    <a href="#"" class="ng-binding text-right" >
-                                                                        كلام خفيف
-                                                                    </a>
-                                                                </h5>
-                                                                <div  class="category ng-scope text-right">
-                                                                        <a href="#"  class="ng-binding text-right" >
-                                                                            رابط خارجي
-                                                                        </a>
-                                                                    </div>
-                                                            </div>
-                                                            <!--------------------------------------------------------------------->
-                                                            <!------------------------- Case Studies ------------------------------>
-                                                            <!--------------------------------------------------------------------->
-                                                            <div class="card" ng-if="featuredSkill.iTalentUrl">
-                                                                    <div class="icon text-center"><img
-                                                                            src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/italent_skills.png">
-                                                                    </div>
-                                                                    <h3 class="text-center" >iTalent / iSkills<br />
-                                                                    <a href="" class="textlink text-right"
-                                                                        >
-                                                                        View More
-                                                                    </a>
-                                                                </h3>
-                                                                    <div class="divider"></div>
-                                                                    <h5 class="text-right" >
-                                                                        <a href="#"" class="ng-binding text-right" >
-                                                                            كلام خفيف
-                                                                        </a>
-                                                                    </h5>
-                                                                    <div  class="category ng-scope text-right">
-                                                                            <a href="#"  class="ng-binding text-right" >
-                                                                                رابط خارجي
-                                                                            </a>
-                                                                        </div>
-                                                                </div>
-                                                            <!--------------------------------------------------------------------->
-                                                            <!------------------------------ COURSES ------------------------------>
-                                                            <!--------------------------------------------------------------------->
-                                                            <div class="card" ng-if="featuredSkill.iTalentUrl">
-                                                                    <div class="icon text-center"><img
-                                                                            src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/italent_skills.png">
-                                                                    </div>
-                                                                    <h3 class="text-center" >iTalent / iSkills<br />
-                                                                    <a href="" class="textlink text-right"
-                                                                        >
-                                                                        View More
-                                                                    </a>
-                                                                </h3>
-                                                                    <div class="divider"></div>
-                                                                    <h5 class="text-right" >
-                                                                        <a href="#"" class="ng-binding text-right" >
-                                                                            كلام خفيف
-                                                                        </a>
-                                                                    </h5>
-                                                                    <div  class="category ng-scope text-right">
-                                                                            <a href="#"  class="ng-binding text-right" >
-                                                                                رابط خارجي
-                                                                            </a>
-                                                                        </div>
-                                                                </div>
-                                                            <!--------------------------------------------------------------------->
-                                                            <!------------------------------ ARTICLES ----------------------------->
-                                                            <!--------------------------------------------------------------------->
-                                                            <div class="card" ng-if="featuredSkill.iTalentUrl">
-                                                                    <div class="icon text-center"><img
-                                                                            src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/italent_skills.png">
-                                                                    </div>
-                                                                    <h3 class="text-center" >iTalent / iSkills<br />
-                                                                    <a href="" class="textlink text-right"
-                                                                        >
-                                                                        View More
-                                                                    </a>
-                                                                </h3>
-                                                                    <div class="divider"></div>
-                                                                    <h5 class="text-right" >
-                                                                        <a href="#"" class="ng-binding text-right" >
-                                                                            كلام خفيف
-                                                                        </a>
-                                                                    </h5>
-                                                                    <div  class="category ng-scope text-right">
-                                                                            <a href="#"  class="ng-binding text-right" >
-                                                                                رابط خارجي
-                                                                            </a>
-                                                                        </div>
-                                                                </div>
-                                                            <!--------------------------------------------------------------------->
-                                                            <!------------------------------ EBOOKS ------------------------------->
-                                                            <!--------------------------------------------------------------------->
-                                                            
-                                                            <!-- </div> -->
-                                                        </div>
-                                                    </div>
+                                                <h6 ng-bind="featuredSkill.category">مهارات مطلوبة لسوق العمل</h6>
+                                                <p class="featured-description">
+                                                    مسيبتن مستيبشمسيب سيبنش
+                                                </p>
+                                            </div>
+                                            <!-- <div class="panel-body"> -->
+                                            <!--------------------------------------------------------------------->
+                                            <!-------------------- iTalent / iSkills ------------------------------>
+                                            <!--------------------------------------------------------------------->
+                                            <div class="card" ng-if="featuredSkill.iTalentUrl">
+                                                <div class="icon text-center"><img
+                                                        src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/italent_skills.png">
+                                                </div>
+                                                <h3 class="text-center">iTalent / iSkills<br />
+                                                    <a href="" class="textlink text-right">
+                                                        View More
+                                                    </a>
+                                                </h3>
+                                                <div class="divider"></div>
+                                                <h5 class="text-right">
+                                                    <a href="#"" class=" ng-binding text-right">
+                                                        كلام خفيف
+                                                    </a>
+                                                </h5>
+                                                <div class="category ng-scope text-right">
+                                                    <a href="#" class="ng-binding text-right">
+                                                        رابط خارجي
+                                                    </a>
                                                 </div>
                                             </div>
+                                            <!--------------------------------------------------------------------->
+                                            <!------------------------- Case Studies ------------------------------>
+                                            <!--------------------------------------------------------------------->
+                                            <div class="card" ng-if="featuredSkill.iTalentUrl">
+                                                <div class="icon text-center"><img
+                                                        src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/italent_skills.png">
+                                                </div>
+                                                <h3 class="text-center">iTalent / iSkills<br />
+                                                    <a href="" class="textlink text-right">
+                                                        View More
+                                                    </a>
+                                                </h3>
+                                                <div class="divider"></div>
+                                                <h5 class="text-right">
+                                                    <a href="#"" class=" ng-binding text-right">
+                                                        كلام خفيف
+                                                    </a>
+                                                </h5>
+                                                <div class="category ng-scope text-right">
+                                                    <a href="#" class="ng-binding text-right">
+                                                        رابط خارجي
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <!--------------------------------------------------------------------->
+                                            <!------------------------------ COURSES ------------------------------>
+                                            <!--------------------------------------------------------------------->
+                                            <div class="card" ng-if="featuredSkill.iTalentUrl">
+                                                <div class="icon text-center"><img
+                                                        src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/italent_skills.png">
+                                                </div>
+                                                <h3 class="text-center">iTalent / iSkills<br />
+                                                    <a href="" class="textlink text-right">
+                                                        View More
+                                                    </a>
+                                                </h3>
+                                                <div class="divider"></div>
+                                                <h5 class="text-right">
+                                                    <a href="#"" class=" ng-binding text-right">
+                                                        كلام خفيف
+                                                    </a>
+                                                </h5>
+                                                <div class="category ng-scope text-right">
+                                                    <a href="#" class="ng-binding text-right">
+                                                        رابط خارجي
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <!--------------------------------------------------------------------->
+                                            <!------------------------------ ARTICLES ----------------------------->
+                                            <!--------------------------------------------------------------------->
+                                            <div class="card" ng-if="featuredSkill.iTalentUrl">
+                                                <div class="icon text-center"><img
+                                                        src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/italent_skills.png">
+                                                </div>
+                                                <h3 class="text-center">iTalent / iSkills<br />
+                                                    <a href="" class="textlink text-right">
+                                                        View More
+                                                    </a>
+                                                </h3>
+                                                <div class="divider"></div>
+                                                <h5 class="text-right">
+                                                    <a href="#"" class=" ng-binding text-right">
+                                                        كلام خفيف
+                                                    </a>
+                                                </h5>
+                                                <div class="category ng-scope text-right">
+                                                    <a href="#" class="ng-binding text-right">
+                                                        رابط خارجي
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <!--------------------------------------------------------------------->
+                                            <!------------------------------ EBOOKS ------------------------------->
+                                            <!--------------------------------------------------------------------->
+
+                                            <!-- </div> -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                           
                         </div>
-
-
-
                     </div>
                 </div>
-                </tion>
+            </div>
+
+
+        </div>
+
+
+
+        </div>
+        </div>
+        </tion>
         </div>
 
 
 
 
-        <div class="panelctrl">
-            <section>
-                <div class="container-fluid ">
-                    <div>
 
-
-
-                        <div class="tools_resources_container parbase">
-                            <div class="container toolsresources">
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <h1>Tools &amp; Resources</h1>
-                                        <div class="tabmodule_B" id="tabset_C">
-                                            <div class="dragscroll_outterbox">
-                                                <div class="dragscroll_innerbox dragscroll">
-                                                    <div class="dragscroll_wrap" style="margin:0 auto">
-                                                        <ul class="nav nav-tabs">
-                                                            <li class="active"><a data-toggle="tab" id="1"
-                                                                    href="#tools_resource_content1">e-Services</a></li>
-                                                            <li><a data-toggle="tab" id="2"
-                                                                    href="#tools_resource_content2">Assessments</a></li>
-                                                            <li><a data-toggle="tab" id="3"
-                                                                    href="#tools_resource_content3">e-Books</a></li>
-                                                            <li><a data-toggle="tab" id="4"
-                                                                    href="#tools_resource_content4">Resume</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="scrollable">
-                                                <div class="tab-content">
-                                                    <div class="tab-pane fade in active" id="tools_resource_content1">
-                                                        <div class="contentblockpanel eservices">
-                                                            <div id="tools_eservices">
-
-
-
-
-                                                                <div class="card_B parbase">
-
-                                                                    <a class="cardlink" target="_blank"
-                                                                        href="career-resources/career-resources/campaigns/skillsfuture-credit1.html"
-                                                                        onclick="$UserLoginUtil.showLoginPopUp(true, false, false, false, 'individual/skillsfuture/login-error-pagef67f.html');"
-                                                                        x-cq-linkchecker="skip">
-                                                                        <div class="card-image">
-                                                                            <img src="https://www.myskillsfuture.sg/content/dam/portal/homepage/img_card_toolresources_sfc.svg"
-                                                                                class="featureimage"
-                                                                                data-emptytext="Image" />
-                                                                        </div>
-                                                                        <div class="card-body">
-                                                                            <h5>Still have your $500 SkillsFuture
-                                                                                Credit? </h5>
-                                                                            <div class="text">Do you know that every
-                                                                                Singaporean is given $500 SkillsFuture
-                                                                                Credit and more than 431,000
-                                                                                Singaporeans have claimed theirs? Find
-                                                                                out more now.</div>
-                                                                        </div>
-                                                                    </a>
-
-
-
-                                                                </div>
-
-
-
-
-                                                                <div class="card_B parbase">
-
-                                                                    <a class="cardlink" target="_blank"
-                                                                        href="https://programmes.myskillsfuture.sg/Portal/ProgramListing.aspx?source=SFSA"
-                                                                        x-cq-linkchecker="skip">
-                                                                        <div class="card-image">
-                                                                            <img src="https://www.myskillsfuture.sg/content/dam/msf/Study Awards_T&amp;R.jpg"
-                                                                                class="featureimage"
-                                                                                data-emptytext="Image" />
-                                                                        </div>
-                                                                        <div class="card-body">
-                                                                            <h5>Apply for the SkillsFuture Study Awards
-                                                                                now!</h5>
-                                                                            <div class="text">Develop and deepen your
-                                                                                skills to enhance your employability
-                                                                                with the help of the SkillsFuture Study
-                                                                                Award. You will receive $5,000 to defray
-                                                                                out-of-pocket course expenses.</div>
-                                                                        </div>
-                                                                    </a>
-
-
-
-                                                                </div>
-
-
-                                                            </div>
-
-                                                        </div><!-- contentblockpanel ends -->
-                                                    </div><!-- tab_B_Content1 ends -->
-
-                                                    <div class="tab-pane fade" id="tools_resource_content2">
-                                                        <div class="contentblockpanel eservices assessment">
-
-
-
-
-                                                            <div class="tools_resources_assessments parbase">
-                                                                <div data-bind="foreach: data" id="tools_assessments">
-                                                                    <!-- ko if: $index() < 1 -->
-                                                                    <div class="card_B">
-                                                                        <a class="cardlink"
-                                                                            href="assessment/landing.html">
-                                                                            <div class="card-image">
-                                                                                <img
-                                                                                    data-bind="attr:{src : '/content/dam/portal/homepage/' + categoryImageUrl, class: 'featureimage'}">
-                                                                            </div>
-                                                                            <div class="card-body">
-                                                                                <h5
-                                                                                    data-bind="text: CommonUtils.ellipseString(categoryName,75)">
-                                                                                </h5>
-                                                                                <div class="text"
-                                                                                    data-bind="text: CommonUtils.ellipseString(description,120)">
-                                                                                </div>
-                                                                            </div>
-                                                                        </a>
-                                                                    </div><!-- card_B ends -->
-                                                                    <!-- /ko -->
-                                                                </div>
-
-                                                                <!-- <script type="text/javascript">
-        $(document).ready(function () {
-            var opts = {
-                action: "get-assessment-categories",
-                resourcePath: '/content/portal/en/index/jcr:content/par/panelctrl_394568432/panel-par/tools_resources_cont/tab2/tools_resoruces_asse'
-            }
-            new AssessmentCard(opts).init();
-        });
-    </script> -->
-
-
-
-
-                                                            </div>
-
-
-                                                        </div>
-                                                    </div><!-- tab_B_Content2 ends -->
-
-                                                    <div class="tab-pane fade" id="tools_resource_content3">
-                                                        <div class="contentblockpanel ebooks">
-
-
-
-
-                                                            <div class="tools_resources_ebooks parbase">
-                                                                <div data-bind="foreach: ebooks" id="random-ebooks">
-                                                                    <div class="card_B">
-                                                                        <a class="cardlink" href="javascript:void(0)"
-                                                                            data-bind="event : { click : function() {$root.selectEbook('#featured-ebooks-slick', id())}}, 
-               		attr : {'analytics-ebook-title': title, 'analytics-ebook-category' : category}">
-                                                                            <div class="card-image">
-                                                                                <img
-                                                                                    data-bind="attr:{src : coverUrl, class: 'featureimage'}">
-                                                                            </div>
-                                                                            <div class="card-body">
-                                                                                <h5
-                                                                                    data-bind="text: CommonUtils.ellipseString(title(),75)">
-                                                                                </h5>
-                                                                                <div class="text"
-                                                                                    data-bind="text: CommonUtils.ellipseString(description(),120)">
-                                                                                </div>
-                                                                            </div>
-                                                                        </a>
-                                                                    </div><!-- card_B ends -->
-                                                                </div>
-
-                                                                <!-- <script type="text/javascript">
-                                                                    $(document).ready(function () {
-                                                                        var opts = {
-                                                                            count: "2",
-                                                                            resourcePath: '/content/portal/en/index/jcr:content/par/panelctrl_394568432/panel-par/tools_resources_cont/tab3/tools_resoruces_eboo'
-                                                                        }
-                                                                        new RandomEbooks(opts).init();
-                                                                    });
-                                                                </script> -->
-
-
-
-
-
-                                                            </div>
-
-
-                                                        </div><!-- contentblockpanel ends -->
-                                                    </div><!-- tab_B_Content3 ends -->
-                                                    <div class="tab-pane fade" id="tools_resource_content4">
-                                                        <div class="contentblockpanel eservices profiler">
-                                                            <div id="tools_resume">
-
-
-
-
-                                                                <div class="card_B parbase">
-
-                                                                    <a class="cardlink" target="_blank"
-                                                                        onclick="$UserLoginUtil.showLoginPopUp(true, true, false, false, 'individual/documents.html');"
-                                                                        x-cq-linkchecker="skip">
-                                                                        <div class="card-image">
-                                                                            <img src="https://www.myskillsfuture.sg/content/dam/portal/homepage/img_card_toolresources_profiler.svg"
-                                                                                class="featureimage"
-                                                                                data-emptytext="Image" />
-                                                                        </div>
-                                                                        <div class="card-body">
-                                                                            <h5>Resume Builder</h5>
-                                                                            <div class="text">Create resumes that best
-                                                                                represent you, your education and
-                                                                                background, and your skills and
-                                                                                competencies, and more, based on
-                                                                                multiple templates that suit your
-                                                                                objectives</div>
-                                                                        </div>
-                                                                    </a>
-
-
-
-                                                                </div>
-
-
-                                                            </div>
-
-                                                        </div>
-                                                    </div><!-- tab_B_Content4 ends -->
-                                                </div>
-                                            </div>
-                                        </div><!-- TAB PANELS video listing ends -->
-
-                                    </div><!-- col -->
-                                </div><!-- row -->
-                            </div><!-- CONTAINER -->
-                            <!-- <script>
-        $(document).ready(function () {
-            initContainer();
-        });
-    </script> -->
-                            <!-- <script>
-  		//Analytics Tracking for tab clicks
-		$('.toolsresources ul.nav.nav-tabs li').on('click', function () {
-			var tabName 	= $(this).text() || '';
-			var sectionName = 'Tools &amp; Resources' || '';
-			if (typeof $PM_ANALYTICS != 'undefined' && tabName && sectionName) {
-				$PM_ANALYTICS.trackTabViewedWithSection(sectionName, tabName);
-			}
-		});
-
-    </script> -->
-
-
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-        </div>
 
 
 
@@ -3336,120 +3156,32 @@ Do consider the above before changing.
 
     </main>
 
-    <footer id="mysf-footer" data-bind="visible : !isMobileApp()">
-        <div class="sitemap">
-            <div class="container">
-                <div class="row">
-                    <div class="hidden-xs col-sm-4 col-md-3 col-lg-2 sitemapbox">
-                        <div class="footer_subheader">MYSKILLSFUTURE</div>
-                        <div class="footer_textlink">
-                            <a href="about/about-myskillsfuture.html">About</a>
-                        </div>
-                        <div class="footer_textlink">
-                            <a href="header/faqs/portal.html">FAQ</a>
-                        </div>
-                        <div class="footer_textlink">
-                            <a href="header/faqs/for-further-assistance.html">Further Assistance</a>
-                        </div>
-                    </div>
-                    <div class="hidden-xs col-sm-4 col-md-3 col-lg-2 sitemapbox">
-                        <div class="footer_subheader">OTHER PROGRAMMES</div>
-                        <div class="footer_textlink">
-                            <a href="https://www.myskillsfuture.sg/content/student/en/primary.html">Primary</a>
-                        </div>
-                        <div class="footer_textlink">
-                            <a href="https://www.myskillsfuture.sg/content/student/en/secondary.html">Secondary</a>
-                        </div>
-                        <div class="footer_textlink">
-                            <a href="https://www.myskillsfuture.sg/content/student/en/preu.html">Pre-University</a>
-                        </div>
-                    </div>
-                    <div class="hidden-xs col-sm-4 col-md-5 col-lg-4 sitemapbox">
-                        <div class="footer_subheader">myskillsfuture app</div>
-                        <span>Learn on the go. Download now!</span><br>
-                        <div class="badgesbox">
-                            <div>
-                                <a href="https://itunes.apple.com/sg/app/myskillsfuture/id1256315705?mt=8"><img
-                                        src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/badge_appstore.png"
-                                        title="Navigate to Apple itunes app page to install  MySkillsFuture app."></a>
-                            </div>
-                            <div>
-                                <a
-                                    href="https://play.google.com/store/apps/details?id=sg.skillsfuture.msf&amp;hl=en_SG"><img
-                                        src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/badge_googleplay.png"
-                                        title="Navigate to Google Play Store app page to install  MySkillsFuture app."></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hidden-xs col-sm-12 col-md-12 col-lg-4 associationbox">
-                        <div class="footer_quote">MySkillsFuture is in association
-                            with</div>
-                        <div class="associationlogobox">
-                            <div>
-                                <a href="http://www.moe.gov.sg/" x-cq-linkchecker="skip"><img
-                                        src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/footer_logo_moe.png"
-                                        alt="Logo of Ministry of Education, Singapore."
-                                        title="Navigate to the https://www.moe.gov.sg/"></a>
-                            </div>
-                            <div class="middlelogo">
-                                <a href="http://www.ssg-wsg.gov.sg/" x-cq-linkchecker="skip"
-                                    title="Navigate to the https://www.ssg-wsg.gov.sg/"><img
-                                        src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/footer_logo_skillsfuturesg.png"
-                                        alt="Logo for SkillsFuture, Singapoe."></a>
-                            </div>
-                            <div>
-                                <a href="http://www.ssg-wsg.gov.sg/" x-cq-linkchecker="skip"
-                                    title="Navigate to the https://www.ssg-wsg.gov.sg/"><img
-                                        src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/footer_logo_wsg.png"
-                                        alt="Logo for Workforce Singapore."></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- SITEMAP end -->
-        <div class="container bottombar">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-md-push-9 col-lg-push-10 logo">
-                    <div class="verticalmiddle">
-                        <a href="http://www.skillsfuture.sg/" target="_blank"
-                            title="Navigate to the https://www.skillsfuture.sg/">
-                            <img
-                                src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/footer_logo_aninitiativeofskillsfuture.png">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8 col-md-pull-2 col-lg-pull-2 termsofuse">
-                    <div class="verticalmiddle">
-                        Copyright &copy; 2018 |
-                        <a href="https://tech.gov.sg/report_vulnerability" target="_blank">Report Vulnerability</a> |
-                        <a href="footer/privacy-policy.html">Privacy Policy</a> |
-                        <a href="footer/terms-of-use.html">Terms of Use</a>
-                        <br>
-                        Supported Browsers: Chrome 51, IE 11, Firefox 46, Safari 10, Opera
-                        37 and above
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-md-pull-2 col-lg-pull-2 socialmedia">
-                    <div class="verticalmiddle"
-                        title="Navigate to respective social media sites.  (Facebook, Twitter, Youtube and Instagram)">
-                        <span>Connect with</span>
-                        <br>
-                        <a href="https://www.facebook.com/skillsfuturesg" class="btn"><i
-                                class="fa fa-facebook-f"></i><span></span></a>
-                        <a href="https://twitter.com/SkillsFutureSG" class="btn"><i class="fa fa-twitter">
+   
+    <footer class="broun " style="display: flex; justify-content: space-between; align-items: center; padding: 30px;">
+       
+                <div class=" socialmedia">
+                        <div class="verticalmiddle">
+                           
+                            <a href="https://www.facebook.com/skillsfuturesg" class="btn"><i class="fa fa-facebook-f"
+                                    style="color: #4D4F4F"></i><span></span></a>
+                            <a href="https://twitter.com/SkillsFutureSG" class="btn"><i class="fa fa-twitter"
+                                    style="color: #4D4F4F">
+                                </i><span></span></a>
+                            <a href="https://www.youtube.com/skillsfuturesg" class="btn"><i
+                                    class="fa fa-youtube" style="color: #4D4F4F">
                             </i><span></span></a>
-                        <!-- <a href="https://www.youtube.com/skillsfuturesg" class="btn"><i
-                                class="fa fa-youtube"> -->
-                        </i><span></span></a>
-                        <a href="https://www.instagram.com/skillsfuturesg/" class="btn"><i
-                                class="fa fa-instagram"></i><span></span></a>
-                    </div>
-                </div>
-            </div>
+                            <a href="https://www.instagram.com/skillsfuturesg/" class="btn"><i class="fa fa-instagram"
+                                    style="color: #4D4F4F"></i><span></span></a>
+                        </div>
+                   
         </div>
-        <!-- BOTTOMBAR end -->
+        <div>
+           <img src="./assets/logo-w.png" width="120px" height="120px" />
+        </div>
+        <div style="align-items: center">
+                <h5 class="ss"> مهاراتي  &copy;<h5>
+                <h5 class="ss">2020-1441<h5>
+        </div>
     </footer>
 
 

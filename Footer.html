@@ -1,0 +1,217 @@
+<div class="panelctrl">
+    <section>
+        <div class="container-fluid ">
+            <div>
+
+
+
+                <div class="tools_resources_container parbase">
+                    <div class="container toolsresources">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h1>Tools &amp; Resources</h1>
+                                <div class="tabmodule_B" id="tabset_C">
+                                    <div class="dragscroll_outterbox">
+                                        <div class="dragscroll_innerbox dragscroll">
+                                            <div class="dragscroll_wrap" style="margin:0 auto">
+                                                <ul class="nav nav-tabs">
+                                                    <li class="active"><a data-toggle="tab" id="1"
+                                                            href="#tools_resource_content1">e-Services</a></li>
+                                                    <li><a data-toggle="tab" id="2"
+                                                            href="#tools_resource_content2">Assessments</a></li>
+                                                    <li><a data-toggle="tab" id="3"
+                                                            href="#tools_resource_content3">e-Books</a></li>
+                                                    <li><a data-toggle="tab" id="4"
+                                                            href="#tools_resource_content4">Resume</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="scrollable">
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade in active" id="tools_resource_content1">
+                                                <!-- <div class="contentblockpanel eservices">
+                                                    <div id="tools_eservices">
+
+
+
+
+                                                        <div class="card_B parbase">
+
+                                                            <a class="cardlink" target="_blank"
+                                                                href="career-resources/career-resources/campaigns/skillsfuture-credit1.html"
+                                                                onclick="$UserLoginUtil.showLoginPopUp(true, false, false, false, 'individual/skillsfuture/login-error-pagef67f.html');"
+                                                                x-cq-linkchecker="skip">
+                                                                <div class="card-image">
+                                                                    <img src="https://www.myskillsfuture.sg/content/dam/portal/homepage/img_card_toolresources_sfc.svg"
+                                                                        class="featureimage"
+                                                                        data-emptytext="Image" />
+                                                                </div>
+                                                                <div class="card-body">
+                                                                    <h5>Still have your $500 SkillsFuture
+                                                                        Credit? </h5>
+                                                                    <div class="text">Do you know that every
+                                                                        Singaporean is given $500 SkillsFuture
+                                                                        Credit and more than 431,000
+                                                                        Singaporeans have claimed theirs? Find
+                                                                        out more now.</div>
+                                                                </div>
+                                                            </a>
+
+
+
+                                                        </div>
+
+
+
+
+                                                        <div class="card_B parbase">
+
+                                                            <a class="cardlink" target="_blank"
+                                                                href="https://programmes.myskillsfuture.sg/Portal/ProgramListing.aspx?source=SFSA"
+                                                                x-cq-linkchecker="skip">
+                                                                <div class="card-image">
+                                                                    <img src="https://www.myskillsfuture.sg/content/dam/msf/Study Awards_T&amp;R.jpg"
+                                                                        class="featureimage"
+                                                                        data-emptytext="Image" />
+                                                                </div>
+                                                                <div class="card-body">
+                                                                    <h5>Apply for the SkillsFuture Study Awards
+                                                                        now!</h5>
+                                                                    <div class="text">Develop and deepen your
+                                                                        skills to enhance your employability
+                                                                        with the help of the SkillsFuture Study
+                                                                        Award. You will receive $5,000 to defray
+                                                                        out-of-pocket course expenses.</div>
+                                                                </div>
+                                                            </a>
+
+
+
+                                                        </div>
+
+
+                                                    </div>
+
+                                                </div> -->
+                                                <!-- contentblockpanel ends -->
+                                            </div>
+                                            <!-- tab_B_Content1 ends -->
+
+                                            <div class="tab-pane fade" id="tools_resource_content2">
+                                                <div class="contentblockpanel eservices assessment">
+
+
+
+
+                                                   <div class="tools_resources_assessments parbase">
+                                                        <div data-bind="foreach: data" id="tools_assessments">
+                                                           
+                                                           
+                                                        </div>
+
+                                                        
+
+
+
+
+                                                    </div> 
+
+
+                                                </div>
+                                            </div>
+                                           
+
+                                            <div class="tab-pane fade" id="tools_resource_content3">
+                                                <div class="contentblockpanel ebooks">
+
+
+
+
+                                                    <div class="tools_resources_ebooks parbase">
+                                                        <div data-bind="foreach: ebooks" id="random-ebooks">
+                                                            <div class="card_B">
+                                                                <a class="cardlink" href="javascript:void(0)"
+                                                                    data-bind="event : { click : function() {$root.selectEbook('#featured-ebooks-slick', id())}}, 
+               attr : {'analytics-ebook-title': title, 'analytics-ebook-category' : category}">
+                                                                    <div class="card-image">
+                                                                        <img
+                                                                            data-bind="attr:{src : coverUrl, class: 'featureimage'}">
+                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <h5
+                                                                            data-bind="text: CommonUtils.ellipseString(title(),75)">
+                                                                        </h5>
+                                                                        <div class="text"
+                                                                            data-bind="text: CommonUtils.ellipseString(description(),120)">
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+
+                                                       
+
+
+
+
+
+                                                    </div>
+
+
+                                                </div>
+                                                <!-- contentblockpanel ends -->
+                                            </div><!-- tab_B_Content3 ends -->
+                                            <div class="tab-pane fade" id="tools_resource_content4">
+                                                <div class="contentblockpanel eservices profiler">
+                                                    <div id="tools_resume">
+
+
+
+
+                                                        <div class="card_B parbase">
+
+                                                            <a class="cardlink" target="_blank"
+                                                                onclick="$UserLoginUtil.showLoginPopUp(true, true, false, false, 'individual/documents.html');"
+                                                                x-cq-linkchecker="skip">
+                                                                <div class="card-image">
+                                                                    <img src="https://www.myskillsfuture.sg/content/dam/portal/homepage/img_card_toolresources_profiler.svg"
+                                                                        class="featureimage"
+                                                                        data-emptytext="Image" />
+                                                                </div>
+                                                                <div class="card-body">
+                                                                    <h5>Resume Builder</h5>
+                                                                    <div class="text">Create resumes that best
+                                                                        represent you, your education and
+                                                                        background, and your skills and
+                                                                        competencies, and more, based on
+                                                                        multiple templates that suit your
+                                                                        objectives</div>
+                                                                </div>
+                                                            </a>
+
+
+
+                                                        </div>
+
+
+                                                    </div>
+
+                                                </div>
+                                            </div><!-- tab_B_Content4 ends -->
+                                        </div>
+                                    </div>
+                                </div><!-- TAB PANELS video listing ends -->
+
+                            </div><!-- col -->
+                        </div><!-- row -->
+                    </div>
+                    
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+</div>

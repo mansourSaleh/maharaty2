@@ -1,3 +1,28 @@
+
+@font-face {
+    font-family: 'flight';
+    src: local('GE_SS_Two_Light'), url(./assets/fonts/GE_SS_Two_Light.otf) format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'fbold';
+    font-weight: bold;
+    src: local('GE_SS_Two_Bold'), url(./assets/fonts/GE_SS_Two_Bold.otf) format('opentype');
+  }
+
+  h1 {
+    font-family: fbold, sans-serif !important;
+  }
+  h2, p, h3, span, a, h4, h5, div {
+    font-family: flight, sans-serif !important;
+  }
+  .ss {
+    font-family: flight, sans-serif !important;
+    color: #fff;
+  }
+  
+
+
 .image-mans{
     background-image: url(./assets/office.jpg);
     background-size: contain;
@@ -26,3 +51,4 @@
 .tabmodule_B .tabContent{
     padding: 0 !important;
 }
+
