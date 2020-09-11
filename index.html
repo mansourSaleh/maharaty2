@@ -652,7 +652,7 @@
 
                         <li class="dropdown header_menu mobilehide">
                             <a class="headertop-title"
-                                data-bind="text : menuName, attr : { href : menuUrl() || '#' }">الدورات</a>
+                                data-bind="text : menuName, attr : { href : menuUrl() || '#' }">الدبلومات</a>
                             <ul class="dropdown-menu homepagemenu"
                                 data-bind="visible : isMenuOpen(), attr : { id : 'menu_' + seqNo()}">
 
@@ -1581,38 +1581,7 @@
         </div>
     </nav>
     <div class="coverall"></div>
-    <section id="stickytab">
-
-
-
-        <a href="javascript:;" id="personalise"
-            onclick="$UserLoginUtil.showLoginPopUpWithMessage(true, true, true, Granite.I18n.get('ind-personalise-login-message'))"
-            class="tab personalise">
-            <div class="text">Personalise</div>
-            <div class="icon">
-                <!-- <img width="32" height="32"
-                    src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/icn_button_personalise.svg" /> -->
-            </div>
-        </a>
-
-
-
-        <a id="ask-jamie-chat" href="#" class="tab chatbot" title="Navigate to the ask Jamie 's chatbox">
-            <div class="text">Chatbot</div>
-            <div class="icon">
-                <!-- <img src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/i_sticky2.png"> -->
-            </div>
-        </a>
-
-        <a href="javascript:;" onclick="CommonUtils.scrollToTop()" class="tab backtotop backtotopbutton"
-            title="Navigate to back to the top page">
-            <div class="text">Back to Top</div>
-            <div class="icon">
-                <!-- <img width="32" height="32"
-                    src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/icn_button_backtotop.svg" /> -->
-            </div>
-        </a>
-    </section>
+  
 
     <main class="theme1 landingpagestyle" id="Homepage">
         <div class="home-heading-banner list parbase">
@@ -1632,7 +1601,7 @@
                                     </ol>
                                     <div class="carousel-inner">
                                         <div class="item active">
-                                            <img src="./assets/office.jpg" class="d-block w-100" alt="..." />
+                                            <img src="./assets/img/Group1.png" class="d-block w-100 vcv" alt="..." />
                                             <div class="carousel-caption">
                                                 <div class="panel-group" style="margin-left: -90px;">
                                                     <div class="panel-header article-content-desktop light-blue">الدعم لخريجي عام 2020
@@ -1642,7 +1611,7 @@
                                                         <h3 class="article-content-desktop ">مبروك التخرج
                                                         </h3>
                                                         <h3 class="article-content-mobile ">مبروك التخرج</h3>
-                                                        <p class="">تعرف أكثر على البرامج والدورات والمسارات المتاحة لك</p>
+                                                        <p class="">تعرف أكثر على البرامج والدبلومات والمسارات المتاحة لك</p>
                                                     </div>
                                                     <div class="panel-footer">
                                                         <a class="textlink">المزيد</a>
@@ -1911,7 +1880,7 @@
 
 
         <div class="panelctrl">
-            <section class="greybackground">
+            <section class="greybackground" style="padding-bottom: 150px">
                 <div class="container-fluid ">
                     <div>
 
@@ -1991,7 +1960,7 @@
                                                                             <div class="icon"><img style="width:50%;"
                                                                                     src="./assets/icons/courses.png">
                                                                             </div>
-                                                                            <h3>الدورات</h3>
+                                                                            <h3>الدبلومات</h3>
                                                                             <a href="/content/portal/en/training-exchange/course-landing.html?industry=Aerospace&amp;title=Aerospace"
                                                                                 ng-click="fnAnalytics('Courses', featuredIndustry.category)"
                                                                                 class="textlink">
@@ -2063,7 +2032,7 @@
                                                                             <div class="icon"><img
                                                                                     src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/i_featuredskills_1.png">
                                                                             </div>
-                                                                            <h3>الدورات</h3>
+                                                                            <h3>الدبلومات</h3>
                                                                             <a href="/content/portal/en/training-exchange/course-landing.html?industry=Aerospace&amp;title=Aerospace"
                                                                                 ng-click="fnAnalytics('Courses', featuredIndustry.category)"
                                                                                 class="textlink">
@@ -2135,7 +2104,7 @@
                                                                             <div class="icon"><img style="width:50%;"
                                                                                     src="./assets/icons/courses.png">
                                                                             </div>
-                                                                            <h3>الدورات</h3>
+                                                                            <h3>الدبلومات</h3>
                                                                             <a href="/content/portal/en/training-exchange/course-landing.html?industry=Aerospace&amp;title=Aerospace"
                                                                                 ng-click="fnAnalytics('Courses', featuredIndustry.category)"
                                                                                 class="textlink">
@@ -2211,7 +2180,7 @@
                                 id="home-courses-container-courses" ng-modules="coursesApp" ng-controller="coursesCtrl">
                                 <div class="row">
                                     <div class="col-xs-12" style="direction: rtl;">
-                                        <h1>الدورات</h1>
+                                        <h1>الدبلومات</h1>
                                         <div class="home-courses-place-holder">
                                             <div class="tabmodule_B" id="tabset_B">
                                                 <div class="dragscroll_outterbox navbarbox">
@@ -2264,7 +2233,7 @@
                                                                     <div
                                                                         class="panel description small newcourses card-blue-in-courses">
                                                                         <h3>دورات جديدة</h3>
-                                                                        <p>اكتشف الدورات الجديدة , واشبع فضولك التعليمي
+                                                                        <p>اكتشف الدبلومات الجديدة , واشبع فضولك التعليمي
                                                                             من خلالها</p>
                                                                     </div>
 
@@ -2405,7 +2374,7 @@
                                                     <div
                                                         class="panel description small popularcourses card-blue-in-courses">
                                                         <h3>الأكثر طلباً</h3>
-                                                        <p>أكثر الدورات طلباً خلال هذا العام </p>
+                                                        <p>أكثر الدبلومات طلباً خلال هذا العام </p>
                                                     </div>
                                                     <div class="card ng-scope" ng-repeat="course in newCourses"
                                                         ng-init="course.tabName = 'New'"">
@@ -2568,7 +2537,7 @@
                             <div class="contentblockpanel" style="display: flex;">
                                 <div class="panel description artsentertainment small  card-blue-in-courses ">
                                     <h3>دورات تقنية</h3>
-                                    <p>اكتشف الدورات الجديدة , واشبع فضولك التعليمي من خلالها</p>
+                                    <p>اكتشف الدبلومات الجديدة , واشبع فضولك التعليمي من خلالها</p>
                                 </div>
 
                                 <div class="card ng-scope" ng-repeat="course in newCourses"
@@ -2691,7 +2660,7 @@
             <div class="contentblockpanel" style="display: flex;">
                 <div class="panel description small artsentertainment card-blue-in-courses">
                     <h3>دورات محاسبة</h3>
-                    <p>اكتشف الدورات المحاسبية , واشبع فضولك التعليمي من خلالها</p>
+                    <p>اكتشف الدبلومات المحاسبية , واشبع فضولك التعليمي من خلالها</p>
                 </div>
 
                 <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
@@ -2811,7 +2780,7 @@
             <div class="contentblockpanel" style="display: flex;">
                 <div class="panel description small newcourses card-blue-in-courses">
                     <h3>دورات تصميم</h3>
-                    <p>اكتشف الدورات الجديدة في التصميم , واشبع فضولك التعليمي من خلالها</p>
+                    <p>اكتشف الدبلومات الجديدة في التصميم , واشبع فضولك التعليمي من خلالها</p>
                 </div>
 
                 <div class="card ng-scope" ng-repeat="course in newCourses" ng-init="course.tabName = 'New'"">
@@ -2997,140 +2966,7 @@
 
 
 
-        <div class="featured-skills list parbase">
-            <div class="container featuredskills" ng-modules="featuredSkillsApp" ng-controller="featuredSkillsCtrl"
-                id="featured-skills">
-                <div class="row">
-                    <div class="col-xs-12" style="direction: rtl;">
-                        <h1>المهارات المطلوبة</h1>
-                        <div class="dragscroll_outterbox">
-                            <div class="dragscroll_innerbox dragscroll">
-                                <div class="dragscroll_wrap">
-
-                                    <div class="contentblockpanel" id="featured-skills-slick" style="display: flex;">
-                                        <div ng-repeat="featuredSkill in featuredSkills"
-                                            class="panel featuredskillsblock box1 ">
-                                            <div class="panel description small featuredSkill " style="position: absolute;
-                                                                right: -20px;
-                                                                margin: 20px;">
-                                                <h6 ng-bind="featuredSkill.category">مهارات مطلوبة لسوق العمل</h6>
-                                                <p class="featured-description">
-                                                    أكثر المهارات الطلوبة لسوق العمل
-                                                </p>
-                                            </div>
-                                            <!-- <div class="panel-body"> -->
-                                            <!--------------------------------------------------------------------->
-                                            <!-------------------- iTalent / iSkills ------------------------------>
-                                            <!--------------------------------------------------------------------->
-                                            <div class="card" ng-if="featuredSkill.iTalentUrl">
-                                                <div class="icon text-center"><img
-                                                        src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/italent_skills.png">
-                                                </div>
-                                                <h3 class="text-center">iTalent / iSkills<br />
-                                                    <a href="" class="textlink text-right">
-                                                        View More
-                                                    </a>
-                                                </h3>
-                                                <div class="divider"></div>
-                                                <h5 class="text-right">
-                                                    <a href="#"" class=" ng-binding text-right">
-                                                        كلام خفيف
-                                                    </a>
-                                                </h5>
-                                                <div class="category ng-scope text-right">
-                                                    <a href="#" class="ng-binding text-right">
-                                                        رابط خارجي
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <!--------------------------------------------------------------------->
-                                            <!------------------------- Case Studies ------------------------------>
-                                            <!--------------------------------------------------------------------->
-                                            <div class="card" ng-if="featuredSkill.iTalentUrl">
-                                                <div class="icon text-center"><img
-                                                        src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/italent_skills.png">
-                                                </div>
-                                                <h3 class="text-center">iTalent / iSkills<br />
-                                                    <a href="" class="textlink text-right">
-                                                        View More
-                                                    </a>
-                                                </h3>
-                                                <div class="divider"></div>
-                                                <h5 class="text-right">
-                                                    <a href="#"" class=" ng-binding text-right">
-                                                        كلام خفيف
-                                                    </a>
-                                                </h5>
-                                                <div class="category ng-scope text-right">
-                                                    <a href="#" class="ng-binding text-right">
-                                                        رابط خارجي
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <!--------------------------------------------------------------------->
-                                            <!------------------------------ COURSES ------------------------------>
-                                            <!--------------------------------------------------------------------->
-                                            <div class="card" ng-if="featuredSkill.iTalentUrl">
-                                                <div class="icon text-center"><img
-                                                        src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/italent_skills.png">
-                                                </div>
-                                                <h3 class="text-center">iTalent / iSkills<br />
-                                                    <a href="" class="textlink text-right">
-                                                        View More
-                                                    </a>
-                                                </h3>
-                                                <div class="divider"></div>
-                                                <h5 class="text-right">
-                                                    <a href="#"" class=" ng-binding text-right">
-                                                        كلام خفيف
-                                                    </a>
-                                                </h5>
-                                                <div class="category ng-scope text-right">
-                                                    <a href="#" class="ng-binding text-right">
-                                                        رابط خارجي
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <!--------------------------------------------------------------------->
-                                            <!------------------------------ ARTICLES ----------------------------->
-                                            <!--------------------------------------------------------------------->
-                                            <div class="card" ng-if="featuredSkill.iTalentUrl">
-                                                <div class="icon text-center"><img
-                                                        src="https://www.myskillsfuture.sg/etc/clientlibs/msf/core-base/Workforce-v2/images/italent_skills.png">
-                                                </div>
-                                                <h3 class="text-center">iTalent / iSkills<br />
-                                                    <a href="" class="textlink text-right">
-                                                        View More
-                                                    </a>
-                                                </h3>
-                                                <div class="divider"></div>
-                                                <h5 class="text-right">
-                                                    <a href="#"" class=" ng-binding text-right">
-                                                        كلام خفيف
-                                                    </a>
-                                                </h5>
-                                                <div class="category ng-scope text-right">
-                                                    <a href="#" class="ng-binding text-right">
-                                                        رابط خارجي
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <!--------------------------------------------------------------------->
-                                            <!------------------------------ EBOOKS ------------------------------->
-                                            <!--------------------------------------------------------------------->
-
-                                            <!-- </div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
+       
 
 
 
@@ -3288,7 +3124,7 @@
     </main>
 
    
-    <footer class="broun " style="display: flex; justify-content: space-between; align-items: center; padding: 30px;">
+    <footer class="broun " style="display: flex; justify-content: space-between; align-items: center; padding: 30px; ">
        
                 <div class=" socialmedia">
                         <div class="verticalmiddle">
@@ -3307,11 +3143,11 @@
                    
         </div>
         <div>
-           <img src="./assets/logo-w.png" width="120px" height="120px" />
+           <img src="./assets/logo-w.png" width="350px" height="110px" />
         </div>
-        <div style="align-items: center">
-                <h5 class="ss"> مهاراتي  &copy;<h5>
-                <h5 class="ss">2020-1441<h5>
+        <div style="align-items: center vbvb">
+                <h5 class="ss"> مهاراتي  &copy; 2020-1441<h5>
+                <h5 class="ss"><h5>
         </div>
     </footer>
 
